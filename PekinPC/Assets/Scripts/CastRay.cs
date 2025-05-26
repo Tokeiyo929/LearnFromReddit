@@ -4,15 +4,49 @@ using UnityEngine;
 
 public class CastRay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private GameObject LastObj = null;
+    private GameObject currentObj;
+    private bool wasHitting = false;
 
-    // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hitInfo;
+
+        if (Physics.Raycast(ray, out hitInfo))
+        {
+            Debug.DrawRay(ray.origin, ray.direction * hitInfo.distance, Color.green);
+            currentObj = hitInfo.collider.gameObject;
+
+            if (wasHitting)
+            {
+                if(currentObj == LastObj)
+                {
+                    RayEventManager.TriggerObjectStayHit(hitInfo);
+                }
+                else
+                {
+                    RayEventManager.TriggerObjectHit(currentObj, hitInfo);
+                    LastObj = currentObj;
+                }
+            }
+            else
+            {
+                RayEventManager.TriggerObjectHit(currentObj, hitInfo);
+                LastObj = currentObj;
+                wasHitting = true;
+            }
+        }
+        else
+        {
+
+            Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red);
+            if (wasHitting)
+            {
+                RayEventManager.TrggerNoObjectHit();
+                LastObj = null;
+                wasHitting = false;
+            }
+        }
     }
 }
