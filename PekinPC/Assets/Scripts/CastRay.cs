@@ -7,13 +7,14 @@ public class CastRay : MonoBehaviour
     private GameObject LastObj = null;
     private GameObject currentObj;
     private bool wasHitting = false;
+    [SerializeField] private LayerMask ignoreLayer;
 
     void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hitInfo;
 
-        if (Physics.Raycast(ray, out hitInfo))
+        if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity, ~ignoreLayer))
         {
             Debug.DrawRay(ray.origin, ray.direction * hitInfo.distance, Color.green);
             currentObj = hitInfo.collider.gameObject;
@@ -39,7 +40,6 @@ public class CastRay : MonoBehaviour
         }
         else
         {
-
             Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red);
             if (wasHitting)
             {
