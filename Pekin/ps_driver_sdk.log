@@ -48730,3 +48730,299 @@
 [2025-05-23 17:25:59.712] [PSS] [error] [1720|9880]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 1236, msg= 由本地系统中止网络连接。
 [2025-05-23 17:25:59.712] [PSS] [error] [1720|9880]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 1236, this= 0x218d452ce80
 [2025-05-23 17:25:59.712] [PSS] [error] [1720|9880]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x218d452ce80
+[2025-05-27 17:33:18.509] [PSS] [info] ***********  Log Begin **********
+[2025-05-27 17:33:18.509] [PSS] [info] process id= 33652
+[2025-05-27 17:33:18.509] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a1cc189bf0, this= 0x2a1cc131eb0
+[2025-05-27 17:33:18.509] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a1cc131eb0
+[2025-05-27 17:33:18.509] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= hy7b9xJt7VDyveW1, this= 0x2a1cc131eb0
+[2025-05-27 17:33:18.509] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= hy7b9xJt7VDyveW1, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a1f0844320
+[2025-05-27 17:33:18.509] [PSS] [debug] [33652|10620]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a1f0844320
+[2025-05-27 17:33:18.510] [PSS] [debug] [33652|10620]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a3a512d470
+[2025-05-27 17:33:18.510] [PSS] [info] [33652|10620]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a3a512d470
+[2025-05-27 17:33:18.510] [PSS] [info] [33652|3396]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a1f0844320
+[2025-05-27 17:33:18.510] [PSS] [debug] [33652|3396]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:54497, this= 0x2a3a512d470
+[2025-05-27 17:33:18.510] [PSS] [debug] [33652|10620]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a1f0844320
+[2025-05-27 17:33:18.510] [PSS] [info] [33652|10620]rpc.cpp:81 Start: start, request id begin from 9135, this= 0x2a1f018f130
+[2025-05-27 17:33:18.511] [PSS] [debug] [33652|10620]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= hy7b9xJt7VDyveW1, this= 0x2a1f0844320
+[2025-05-27 17:33:18.614] [PSS] [info] [33652|10620]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {}, this= 0x2a1f0844320
+[2025-05-27 17:33:18.614] [PSS] [error] [33652|10620]streaming_driver_interface_impl.cpp:332 NotifyClientConnectResult: connect to service failed, RPC Error, this= 0x2a1cc131eb0
+[2025-05-27 17:33:18.638] [PSS] [error] [33652|10620]rpc.cpp:288 HandleReceiveData: "response cannot find correspond request,", iter == inflight_requests_.end(), this= 0x2a1f018f130
+[2025-05-27 17:39:55.906] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a1be1f28f0, this= 0x2a395d29f60
+[2025-05-27 17:39:55.907] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a395d29f60
+[2025-05-27 17:39:55.907] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= PMYJSCqsCcE9JAMd, this= 0x2a395d29f60
+[2025-05-27 17:39:55.907] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= PMYJSCqsCcE9JAMd, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a3a3ece390
+[2025-05-27 17:39:55.907] [PSS] [debug] [33652|35268]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a3a3ece390
+[2025-05-27 17:39:55.907] [PSS] [debug] [33652|35268]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a2a67bf970
+[2025-05-27 17:39:55.907] [PSS] [info] [33652|35268]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a2a67bf970
+[2025-05-27 17:39:55.907] [PSS] [info] [33652|2356]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a3a3ece390
+[2025-05-27 17:39:55.907] [PSS] [debug] [33652|35268]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a3a3ece390
+[2025-05-27 17:39:55.907] [PSS] [debug] [33652|2356]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:54730, this= 0x2a2a67bf970
+[2025-05-27 17:39:55.907] [PSS] [info] [33652|35268]rpc.cpp:81 Start: start, request id begin from 9019, this= 0x2a3fb7f2340
+[2025-05-27 17:39:55.908] [PSS] [debug] [33652|35268]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= PMYJSCqsCcE9JAMd, this= 0x2a3a3ece390
+[2025-05-27 17:39:55.909] [PSS] [info] [33652|35268]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "PMYJSCqsCcE9JAMd" service_id: "xre_OAf6geq7" service_version: "2.2.1.9"}, this= 0x2a3a3ece390
+[2025-05-27 17:39:55.909] [PSS] [info] [33652|35268]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= PMYJSCqsCcE9JAMd, service_version= 2.2.1.9, this= 0x2a395d29f60
+[2025-05-27 17:39:55.909] [PSS] [debug] [33652|35268]streaming_client_impl.cpp:100 DisconnectClient: service disconnect, request_id= 9442, request_msg= service_id: "xre_OAf6geq7" client_id: "PMYJSCqsCcE9JAMd", this= 0x2a3a3ece390
+[2025-05-27 17:39:55.909] [PSS] [debug] [33652|35268]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a2a67bf970
+[2025-05-27 17:39:55.909] [PSS] [error] [33652|2356]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 17:39:55.909] [PSS] [error] [33652|2356]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a2a67bf970
+[2025-05-27 17:39:55.909] [PSS] [error] [33652|2356]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a2a67bf970
+[2025-05-27 17:39:55.909] [PSS] [debug] [33652|2356]transport_client_tcp3.cpp:190 operator (): close socket
+[2025-05-27 17:39:55.909] [PSS] [error] [33652|2356]transport_client_tcp3.cpp:200 HandleSendDataResult: send error= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 17:39:55.909] [PSS] [error] [33652|2356]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a2a67bf970
+[2025-05-27 17:39:55.909] [PSS] [warning] [33652|2356]transport_client_tcp3.cpp:204 HandleSendDataResult: send not completed, 0/29
+[2025-05-27 17:40:22.802] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a1c13d58a0, this= 0x2a3965bc9c0
+[2025-05-27 17:40:22.803] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a3965bc9c0
+[2025-05-27 17:40:22.803] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= oXm3mIKDHAEYCpxZ, this= 0x2a3965bc9c0
+[2025-05-27 17:40:22.803] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= oXm3mIKDHAEYCpxZ, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.803] [PSS] [debug] [33652|39404]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.803] [PSS] [debug] [33652|39404]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a3a5120f90
+[2025-05-27 17:40:22.804] [PSS] [info] [33652|39404]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a3a5120f90
+[2025-05-27 17:40:22.804] [PSS] [info] [33652|35388]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.804] [PSS] [debug] [33652|35388]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:54749, this= 0x2a3a5120f90
+[2025-05-27 17:40:22.804] [PSS] [debug] [33652|39404]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.804] [PSS] [info] [33652|39404]rpc.cpp:81 Start: start, request id begin from 9351, this= 0x2a29f283010
+[2025-05-27 17:40:22.804] [PSS] [debug] [33652|39404]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= oXm3mIKDHAEYCpxZ, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.804] [PSS] [info] [33652|39404]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "oXm3mIKDHAEYCpxZ" service_id: "xre_OAf6geq7" service_version: "2.2.1.9"}, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.804] [PSS] [info] [33652|39404]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= oXm3mIKDHAEYCpxZ, service_version= 2.2.1.9, this= 0x2a3965bc9c0
+[2025-05-27 17:40:22.805] [PSS] [error] [33652|35388]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 17:40:22.805] [PSS] [error] [33652|35388]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a3a5120f90
+[2025-05-27 17:40:22.805] [PSS] [info] [33652|35388]streaming_client_impl.cpp:77 NotifyDisconnect: network disconnect, result= 10054, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.805] [PSS] [debug] [33652|35388]transport_client_tcp3.cpp:171 HandleAsyncError: close socket, this= 0x2a3a5120f90
+[2025-05-27 17:40:22.805] [PSS] [debug] [33652|39404]streaming_client_impl.cpp:218 HandleNetworkDisconnect: handle network disconnect,reason= 10054, this= 0x2a3f8aae950
+[2025-05-27 17:40:22.805] [PSS] [debug] [33652|39404]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a3a5120f90
+[2025-05-27 17:40:22.805] [PSS] [error] [33652|35388]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a3a5120f90
+[2025-05-27 17:40:52.711] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a395ac5690, this= 0x2a3f8fd3050
+[2025-05-27 17:40:52.712] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a3f8fd3050
+[2025-05-27 17:40:52.712] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= OoQJ24Ka6DEImOb2, this= 0x2a3f8fd3050
+[2025-05-27 17:40:52.712] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= OoQJ24Ka6DEImOb2, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.712] [PSS] [debug] [33652|40920]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.712] [PSS] [debug] [33652|40920]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a2a67bfeb0
+[2025-05-27 17:40:52.712] [PSS] [info] [33652|40920]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a2a67bfeb0
+[2025-05-27 17:40:52.712] [PSS] [info] [33652|4868]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.712] [PSS] [debug] [33652|4868]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:54800, this= 0x2a2a67bfeb0
+[2025-05-27 17:40:52.712] [PSS] [debug] [33652|40920]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.712] [PSS] [info] [33652|40920]rpc.cpp:81 Start: start, request id begin from 1668, this= 0x2a1cc6b4540
+[2025-05-27 17:40:52.713] [PSS] [debug] [33652|40920]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= OoQJ24Ka6DEImOb2, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.713] [PSS] [info] [33652|40920]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "OoQJ24Ka6DEImOb2" service_id: "xre_OAf6geq7" service_version: "2.2.1.9"}, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.713] [PSS] [info] [33652|40920]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= OoQJ24Ka6DEImOb2, service_version= 2.2.1.9, this= 0x2a3f8fd3050
+[2025-05-27 17:40:52.713] [PSS] [error] [33652|4868]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 17:40:52.713] [PSS] [error] [33652|4868]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a2a67bfeb0
+[2025-05-27 17:40:52.713] [PSS] [info] [33652|4868]streaming_client_impl.cpp:77 NotifyDisconnect: network disconnect, result= 10054, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.713] [PSS] [debug] [33652|4868]transport_client_tcp3.cpp:171 HandleAsyncError: close socket, this= 0x2a2a67bfeb0
+[2025-05-27 17:40:52.713] [PSS] [debug] [33652|40920]streaming_client_impl.cpp:218 HandleNetworkDisconnect: handle network disconnect,reason= 10054, this= 0x2a19c2b4d20
+[2025-05-27 17:40:52.713] [PSS] [error] [33652|4868]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a2a67bfeb0
+[2025-05-27 17:40:52.713] [PSS] [debug] [33652|40920]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a2a67bfeb0
+[2025-05-27 17:41:04.413] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a1c9f9ef70, this= 0x2a24f94eb50
+[2025-05-27 17:41:04.414] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a24f94eb50
+[2025-05-27 17:41:04.414] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= 4OLYYEeXnTMfrqAE, this= 0x2a24f94eb50
+[2025-05-27 17:41:04.414] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= 4OLYYEeXnTMfrqAE, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.414] [PSS] [debug] [33652|27964]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.414] [PSS] [debug] [33652|27964]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a2a613e4b0
+[2025-05-27 17:41:04.415] [PSS] [info] [33652|27964]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a2a613e4b0
+[2025-05-27 17:41:04.415] [PSS] [info] [33652|40212]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.415] [PSS] [debug] [33652|40212]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:54804, this= 0x2a2a613e4b0
+[2025-05-27 17:41:04.415] [PSS] [debug] [33652|27964]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.415] [PSS] [info] [33652|27964]rpc.cpp:81 Start: start, request id begin from 4015, this= 0x2a2a6d3a150
+[2025-05-27 17:41:04.415] [PSS] [debug] [33652|27964]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= 4OLYYEeXnTMfrqAE, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.415] [PSS] [error] [33652|40212]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 17:41:04.415] [PSS] [info] [33652|27964]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "4OLYYEeXnTMfrqAE" service_id: "xre_OAf6geq7" service_version: "2.2.1.9"}, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.415] [PSS] [error] [33652|40212]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a2a613e4b0
+[2025-05-27 17:41:04.415] [PSS] [info] [33652|27964]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= 4OLYYEeXnTMfrqAE, service_version= 2.2.1.9, this= 0x2a24f94eb50
+[2025-05-27 17:41:04.415] [PSS] [info] [33652|40212]streaming_client_impl.cpp:77 NotifyDisconnect: network disconnect, result= 10054, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.415] [PSS] [debug] [33652|40212]transport_client_tcp3.cpp:171 HandleAsyncError: close socket, this= 0x2a2a613e4b0
+[2025-05-27 17:41:04.416] [PSS] [error] [33652|40212]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a2a613e4b0
+[2025-05-27 17:41:04.416] [PSS] [debug] [33652|27964]streaming_client_impl.cpp:218 HandleNetworkDisconnect: handle network disconnect,reason= 10054, this= 0x2a1c9ad9ee0
+[2025-05-27 17:41:04.416] [PSS] [debug] [33652|27964]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a2a613e4b0
+[2025-05-27 17:41:19.094] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a3a4ed1fe0, this= 0x2a1be19db50
+[2025-05-27 17:41:19.095] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a1be19db50
+[2025-05-27 17:41:19.095] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= zMzIq79xgPWfSess, this= 0x2a1be19db50
+[2025-05-27 17:41:19.095] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= zMzIq79xgPWfSess, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.095] [PSS] [debug] [33652|18440]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.095] [PSS] [debug] [33652|18440]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a2a61462b0
+[2025-05-27 17:41:19.095] [PSS] [info] [33652|18440]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a2a61462b0
+[2025-05-27 17:41:19.095] [PSS] [info] [33652|24516]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.095] [PSS] [debug] [33652|24516]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:54815, this= 0x2a2a61462b0
+[2025-05-27 17:41:19.095] [PSS] [debug] [33652|18440]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.095] [PSS] [info] [33652|18440]rpc.cpp:81 Start: start, request id begin from 7958, this= 0x2a29f283010
+[2025-05-27 17:41:19.096] [PSS] [debug] [33652|18440]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= zMzIq79xgPWfSess, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.096] [PSS] [info] [33652|18440]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "zMzIq79xgPWfSess" service_id: "xre_OAf6geq7" service_version: "2.2.1.9"}, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.096] [PSS] [info] [33652|18440]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= zMzIq79xgPWfSess, service_version= 2.2.1.9, this= 0x2a1be19db50
+[2025-05-27 17:41:19.096] [PSS] [error] [33652|24516]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 17:41:19.096] [PSS] [error] [33652|24516]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a2a61462b0
+[2025-05-27 17:41:19.096] [PSS] [info] [33652|24516]streaming_client_impl.cpp:77 NotifyDisconnect: network disconnect, result= 10054, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.096] [PSS] [debug] [33652|24516]transport_client_tcp3.cpp:171 HandleAsyncError: close socket, this= 0x2a2a61462b0
+[2025-05-27 17:41:19.096] [PSS] [error] [33652|24516]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a2a61462b0
+[2025-05-27 17:41:19.096] [PSS] [debug] [33652|18440]streaming_client_impl.cpp:218 HandleNetworkDisconnect: handle network disconnect,reason= 10054, this= 0x2a3f8aacb90
+[2025-05-27 17:41:19.096] [PSS] [debug] [33652|18440]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a2a61462b0
+[2025-05-27 17:41:30.798] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a395ed7400, this= 0x2a2470f4f40
+[2025-05-27 17:41:30.799] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a2470f4f40
+[2025-05-27 17:41:30.799] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= GKgBYcGgaAnpvNzL, this= 0x2a2470f4f40
+[2025-05-27 17:41:30.799] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= GKgBYcGgaAnpvNzL, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.799] [PSS] [debug] [33652|12508]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.799] [PSS] [debug] [33652|12508]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a3a5126b70
+[2025-05-27 17:41:30.799] [PSS] [info] [33652|12508]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a3a5126b70
+[2025-05-27 17:41:30.799] [PSS] [info] [33652|14508]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.799] [PSS] [debug] [33652|14508]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:54823, this= 0x2a3a5126b70
+[2025-05-27 17:41:30.799] [PSS] [debug] [33652|12508]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.799] [PSS] [info] [33652|12508]rpc.cpp:81 Start: start, request id begin from 1417, this= 0x2a246955090
+[2025-05-27 17:41:30.800] [PSS] [debug] [33652|12508]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= GKgBYcGgaAnpvNzL, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.801] [PSS] [error] [33652|14508]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 17:41:30.801] [PSS] [error] [33652|14508]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a3a5126b70
+[2025-05-27 17:41:30.801] [PSS] [info] [33652|14508]streaming_client_impl.cpp:77 NotifyDisconnect: network disconnect, result= 10054, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.801] [PSS] [debug] [33652|14508]transport_client_tcp3.cpp:171 HandleAsyncError: close socket, this= 0x2a3a5126b70
+[2025-05-27 17:41:30.801] [PSS] [debug] [33652|12508]streaming_client_impl.cpp:218 HandleNetworkDisconnect: handle network disconnect,reason= 10054, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.801] [PSS] [error] [33652|12508]streaming_client_impl.cpp:237 HandleConnectToServiceResp: "invalid rpc client state", state_ != ClientState::kRpcConnecting, this= 0x2a2bb08d4c0
+[2025-05-27 17:41:30.801] [PSS] [error] [33652|14508]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a3a5126b70
+[2025-05-27 17:41:30.801] [PSS] [debug] [33652|12508]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a3a5126b70
+[2025-05-27 18:04:15.164] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a1be1f7030, this= 0x2a24f94eb50
+[2025-05-27 18:04:15.165] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a24f94eb50
+[2025-05-27 18:04:15.165] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= ld7CLS6PzRTeMlLg, this= 0x2a24f94eb50
+[2025-05-27 18:04:15.165] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= ld7CLS6PzRTeMlLg, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.165] [PSS] [debug] [33652|32136]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.165] [PSS] [debug] [33652|32136]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a23bf6ecc0
+[2025-05-27 18:04:15.165] [PSS] [info] [33652|32136]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a23bf6ecc0
+[2025-05-27 18:04:15.165] [PSS] [info] [33652|11400]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.165] [PSS] [debug] [33652|32136]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.165] [PSS] [debug] [33652|11400]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:56554, this= 0x2a23bf6ecc0
+[2025-05-27 18:04:15.165] [PSS] [info] [33652|32136]rpc.cpp:81 Start: start, request id begin from 3977, this= 0x2a246953b50
+[2025-05-27 18:04:15.165] [PSS] [debug] [33652|32136]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= ld7CLS6PzRTeMlLg, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.191] [PSS] [error] [33652|11400]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 18:04:15.191] [PSS] [error] [33652|11400]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a23bf6ecc0
+[2025-05-27 18:04:15.191] [PSS] [info] [33652|11400]streaming_client_impl.cpp:77 NotifyDisconnect: network disconnect, result= 10054, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.191] [PSS] [debug] [33652|11400]transport_client_tcp3.cpp:171 HandleAsyncError: close socket, this= 0x2a23bf6ecc0
+[2025-05-27 18:04:15.191] [PSS] [debug] [33652|32136]streaming_client_impl.cpp:218 HandleNetworkDisconnect: handle network disconnect,reason= 10054, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.191] [PSS] [error] [33652|32136]streaming_client_impl.cpp:237 HandleConnectToServiceResp: "invalid rpc client state", state_ != ClientState::kRpcConnecting, this= 0x2a2bb08af90
+[2025-05-27 18:04:15.191] [PSS] [debug] [33652|32136]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a23bf6ecc0
+[2025-05-27 18:04:15.191] [PSS] [error] [33652|11400]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a23bf6ecc0
+[2025-05-27 18:05:21.994] [PSS] [debug] [33652|30980]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x2a24f3e91d0, this= 0x2a235da8b40
+[2025-05-27 18:05:21.995] [PSS] [error] [33652|30980]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x2a235da8b40
+[2025-05-27 18:05:21.995] [PSS] [info] [33652|30980]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= ZLQ2NXcvUDC3Busa, this= 0x2a235da8b40
+[2025-05-27 18:05:21.995] [PSS] [info] [33652|30980]streaming_client_impl.cpp:25 ConnectToService: client_id= ZLQ2NXcvUDC3Busa, name= 3D Engine, desp= StreamingSceneRender, this= 0x2a235ca9c40
+[2025-05-27 18:05:21.995] [PSS] [debug] [33652|14980]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x2a235ca9c40
+[2025-05-27 18:05:21.995] [PSS] [debug] [33652|14980]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x2a23bf701c0
+[2025-05-27 18:05:21.995] [PSS] [info] [33652|14980]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x2a23bf701c0
+[2025-05-27 18:05:21.996] [PSS] [info] [33652|31776]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x2a235ca9c40
+[2025-05-27 18:05:21.996] [PSS] [debug] [33652|31776]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:56610, this= 0x2a23bf701c0
+[2025-05-27 18:05:21.996] [PSS] [debug] [33652|14980]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x2a235ca9c40
+[2025-05-27 18:05:21.996] [PSS] [info] [33652|14980]rpc.cpp:81 Start: start, request id begin from 2491, this= 0x2a1eff8e8a0
+[2025-05-27 18:05:21.996] [PSS] [debug] [33652|14980]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= ZLQ2NXcvUDC3Busa, this= 0x2a235ca9c40
+[2025-05-27 18:05:22.016] [PSS] [info] [33652|14980]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "ZLQ2NXcvUDC3Busa" service_id: "xre_OAf6geq7" service_version: "2.2.1.9"}, this= 0x2a235ca9c40
+[2025-05-27 18:05:22.016] [PSS] [info] [33652|14980]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= ZLQ2NXcvUDC3Busa, service_version= 2.2.1.9, this= 0x2a235da8b40
+[2025-05-27 18:05:22.016] [PSS] [error] [33652|31776]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 10054, msg= 远程主机强迫关闭了一个现有的连接。
+[2025-05-27 18:05:22.016] [PSS] [error] [33652|31776]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 10054, this= 0x2a23bf701c0
+[2025-05-27 18:05:22.016] [PSS] [info] [33652|31776]streaming_client_impl.cpp:77 NotifyDisconnect: network disconnect, result= 10054, this= 0x2a235ca9c40
+[2025-05-27 18:05:22.016] [PSS] [debug] [33652|31776]transport_client_tcp3.cpp:171 HandleAsyncError: close socket, this= 0x2a23bf701c0
+[2025-05-27 18:05:22.016] [PSS] [debug] [33652|14980]streaming_client_impl.cpp:218 HandleNetworkDisconnect: handle network disconnect,reason= 10054, this= 0x2a235ca9c40
+[2025-05-27 18:05:22.016] [PSS] [debug] [33652|14980]transport_client_tcp3.cpp:79 Stop: called, this= 0x2a23bf701c0
+[2025-05-27 18:05:22.016] [PSS] [error] [33652|31776]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x2a23bf701c0
+[2025-05-28 10:37:08.542] [PSS] [info] ***********  Log Begin **********
+[2025-05-28 10:37:08.542] [PSS] [info] process id= 11004
+[2025-05-28 10:37:08.542] [PSS] [debug] [11004|9568]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x17b22533eb0, this= 0x17a62309bc0
+[2025-05-28 10:37:08.542] [PSS] [error] [11004|9568]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x17a62309bc0
+[2025-05-28 10:37:08.542] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= QJs1zo29Cd9gJEVa, this= 0x17a62309bc0
+[2025-05-28 10:37:08.542] [PSS] [info] [11004|9568]streaming_client_impl.cpp:25 ConnectToService: client_id= QJs1zo29Cd9gJEVa, name= 3D Engine, desp= StreamingSceneRender, this= 0x17bedf1c900
+[2025-05-28 10:37:08.543] [PSS] [debug] [11004|8876]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x17bedf1c900
+[2025-05-28 10:37:08.543] [PSS] [debug] [11004|8876]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x17bedc5f550
+[2025-05-28 10:37:08.543] [PSS] [info] [11004|8876]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x17bedc5f550
+[2025-05-28 10:37:08.543] [PSS] [info] [11004|19676]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x17bedf1c900
+[2025-05-28 10:37:08.543] [PSS] [debug] [11004|8876]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x17bedf1c900
+[2025-05-28 10:37:08.543] [PSS] [debug] [11004|19676]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:63322, this= 0x17bedc5f550
+[2025-05-28 10:37:08.544] [PSS] [info] [11004|8876]rpc.cpp:81 Start: start, request id begin from 7736, this= 0x17b222e3450
+[2025-05-28 10:37:08.544] [PSS] [debug] [11004|8876]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= QJs1zo29Cd9gJEVa, this= 0x17bedf1c900
+[2025-05-28 10:37:08.557] [PSS] [info] [11004|8876]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "QJs1zo29Cd9gJEVa" service_id: "xre_v7Bh8Die" service_version: "2.2.1.9"}, this= 0x17bedf1c900
+[2025-05-28 10:37:08.557] [PSS] [info] [11004|8876]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= QJs1zo29Cd9gJEVa, service_version= 2.2.1.9, this= 0x17a62309bc0
+[2025-05-28 10:37:55.373] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:34 DisconnectFromService: disconnect from service, client_id= QJs1zo29Cd9gJEVa, this= 0x17a62309bc0
+[2025-05-28 10:37:55.373] [PSS] [info] [11004|9568]streaming_client_impl.cpp:37 DisconnectFromService: disconnect from service, this= 0x17bedf1c900
+[2025-05-28 10:37:55.373] [PSS] [debug] [11004|8876]streaming_client_impl.cpp:175 InvokeDisconnectFromService: disconnect from service, this= 0x17bedf1c900
+[2025-05-28 10:37:55.373] [PSS] [debug] [11004|8876]streaming_client_impl.cpp:253 HandleDisconnectFromServiceResp: disconnect response {}, this= 0x17bedf1c900
+[2025-05-28 10:37:55.373] [PSS] [debug] [11004|8876]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc5f550
+[2025-05-28 10:37:55.373] [PSS] [debug] [11004|8876]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc5f550
+[2025-05-28 10:37:55.373] [PSS] [debug] [11004|8876]streaming_client_impl.cpp:194 InvokeDisconnectFromService: disconnect from service, {client_id: "QJs1zo29Cd9gJEVa"}, this= 0x17bedf1c900
+[2025-05-28 10:37:55.373] [PSS] [info] [11004|9568]streaming_client_impl.cpp:44 DisconnectFromService: disconnect from service completed, this= 0x17bedf1c900
+[2025-05-28 10:37:55.373] [PSS] [debug] [11004|19676]transport_client_tcp3.cpp:190 operator (): close socket
+[2025-05-28 10:37:55.373] [PSS] [error] [11004|19676]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 1236, msg= 由本地系统中止网络连接。
+[2025-05-28 10:37:55.373] [PSS] [error] [11004|19676]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 1236, this= 0x17bedc5f550
+[2025-05-28 10:37:55.373] [PSS] [error] [11004|19676]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x17bedc5f550
+[2025-05-28 10:50:50.454] [PSS] [debug] [11004|9568]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x17a6d764870, this= 0x17beff4cba0
+[2025-05-28 10:50:50.455] [PSS] [error] [11004|9568]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x17beff4cba0
+[2025-05-28 10:50:50.455] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= mBTZY393byQesHdg, this= 0x17beff4cba0
+[2025-05-28 10:50:50.455] [PSS] [info] [11004|9568]streaming_client_impl.cpp:25 ConnectToService: client_id= mBTZY393byQesHdg, name= 3D Engine, desp= StreamingSceneRender, this= 0x17bf00dd820
+[2025-05-28 10:50:50.455] [PSS] [debug] [11004|26384]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x17bf00dd820
+[2025-05-28 10:50:50.455] [PSS] [debug] [11004|26384]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x17bedc69030
+[2025-05-28 10:50:50.455] [PSS] [info] [11004|26384]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x17bedc69030
+[2025-05-28 10:50:50.456] [PSS] [info] [11004|756]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x17bf00dd820
+[2025-05-28 10:50:50.456] [PSS] [debug] [11004|26384]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x17bf00dd820
+[2025-05-28 10:50:50.456] [PSS] [debug] [11004|756]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:64049, this= 0x17bedc69030
+[2025-05-28 10:50:50.456] [PSS] [info] [11004|26384]rpc.cpp:81 Start: start, request id begin from 9607, this= 0x17a6cbd2ab0
+[2025-05-28 10:50:50.456] [PSS] [debug] [11004|26384]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= mBTZY393byQesHdg, this= 0x17bf00dd820
+[2025-05-28 10:50:50.457] [PSS] [info] [11004|26384]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "mBTZY393byQesHdg" service_id: "xre_v7Bh8Die" service_version: "2.2.1.9"}, this= 0x17bf00dd820
+[2025-05-28 10:50:50.457] [PSS] [info] [11004|26384]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= mBTZY393byQesHdg, service_version= 2.2.1.9, this= 0x17beff4cba0
+[2025-05-28 10:50:50.458] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:50 StartStreaming: start streaming, {width: 1920 height: 1920 frame_rate: 72}, this= 0x17beff4cba0
+[2025-05-28 10:51:12.128] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:34 DisconnectFromService: disconnect from service, client_id= mBTZY393byQesHdg, this= 0x17beff4cba0
+[2025-05-28 10:51:12.128] [PSS] [info] [11004|9568]streaming_client_impl.cpp:37 DisconnectFromService: disconnect from service, this= 0x17bf00dd820
+[2025-05-28 10:51:12.128] [PSS] [debug] [11004|26384]streaming_client_impl.cpp:175 InvokeDisconnectFromService: disconnect from service, this= 0x17bf00dd820
+[2025-05-28 10:51:12.128] [PSS] [debug] [11004|26384]streaming_client_impl.cpp:253 HandleDisconnectFromServiceResp: disconnect response {}, this= 0x17bf00dd820
+[2025-05-28 10:51:12.128] [PSS] [debug] [11004|26384]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc69030
+[2025-05-28 10:51:12.129] [PSS] [debug] [11004|26384]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc69030
+[2025-05-28 10:51:12.129] [PSS] [debug] [11004|26384]streaming_client_impl.cpp:194 InvokeDisconnectFromService: disconnect from service, {client_id: "mBTZY393byQesHdg"}, this= 0x17bf00dd820
+[2025-05-28 10:51:12.129] [PSS] [error] [11004|756]transport_client_tcp3.cpp:146 operator (): "not connected", !running_, this= 0x17bedc69030
+[2025-05-28 10:51:12.129] [PSS] [debug] [11004|756]transport_client_tcp3.cpp:190 operator (): close socket
+[2025-05-28 10:51:12.129] [PSS] [info] [11004|9568]streaming_client_impl.cpp:44 DisconnectFromService: disconnect from service completed, this= 0x17bf00dd820
+[2025-05-28 10:51:12.129] [PSS] [error] [11004|756]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 1236, msg= 由本地系统中止网络连接。
+[2025-05-28 10:51:12.129] [PSS] [error] [11004|756]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 1236, this= 0x17bedc69030
+[2025-05-28 10:51:12.129] [PSS] [error] [11004|756]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x17bedc69030
+[2025-05-28 10:51:33.212] [PSS] [debug] [11004|9568]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x17a93995550, this= 0x17bfa9b2050
+[2025-05-28 10:51:33.213] [PSS] [error] [11004|9568]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x17bfa9b2050
+[2025-05-28 10:51:33.213] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= UwPNkDdtUbco17GR, this= 0x17bfa9b2050
+[2025-05-28 10:51:33.213] [PSS] [info] [11004|9568]streaming_client_impl.cpp:25 ConnectToService: client_id= UwPNkDdtUbco17GR, name= 3D Engine, desp= StreamingSceneRender, this= 0x17a3dbb83a0
+[2025-05-28 10:51:33.213] [PSS] [debug] [11004|14836]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x17a3dbb83a0
+[2025-05-28 10:51:33.213] [PSS] [debug] [11004|14836]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x17bedc3e310
+[2025-05-28 10:51:33.213] [PSS] [info] [11004|14836]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x17bedc3e310
+[2025-05-28 10:51:33.213] [PSS] [info] [11004|23548]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x17a3dbb83a0
+[2025-05-28 10:51:33.213] [PSS] [debug] [11004|23548]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:64064, this= 0x17bedc3e310
+[2025-05-28 10:51:33.213] [PSS] [debug] [11004|14836]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x17a3dbb83a0
+[2025-05-28 10:51:33.213] [PSS] [info] [11004|14836]rpc.cpp:81 Start: start, request id begin from 5188, this= 0x17a6cbd2330
+[2025-05-28 10:51:33.213] [PSS] [debug] [11004|14836]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= UwPNkDdtUbco17GR, this= 0x17a3dbb83a0
+[2025-05-28 10:51:33.214] [PSS] [info] [11004|14836]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "UwPNkDdtUbco17GR" service_id: "xre_v7Bh8Die" service_version: "2.2.1.9"}, this= 0x17a3dbb83a0
+[2025-05-28 10:51:33.214] [PSS] [info] [11004|14836]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= UwPNkDdtUbco17GR, service_version= 2.2.1.9, this= 0x17bfa9b2050
+[2025-05-28 10:51:33.214] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:50 StartStreaming: start streaming, {width: 1920 height: 1920 frame_rate: 72}, this= 0x17bfa9b2050
+[2025-05-28 10:51:38.868] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:34 DisconnectFromService: disconnect from service, client_id= UwPNkDdtUbco17GR, this= 0x17bfa9b2050
+[2025-05-28 10:51:38.868] [PSS] [info] [11004|9568]streaming_client_impl.cpp:37 DisconnectFromService: disconnect from service, this= 0x17a3dbb83a0
+[2025-05-28 10:51:38.868] [PSS] [debug] [11004|14836]streaming_client_impl.cpp:175 InvokeDisconnectFromService: disconnect from service, this= 0x17a3dbb83a0
+[2025-05-28 10:51:38.868] [PSS] [debug] [11004|14836]streaming_client_impl.cpp:253 HandleDisconnectFromServiceResp: disconnect response {}, this= 0x17a3dbb83a0
+[2025-05-28 10:51:38.869] [PSS] [debug] [11004|14836]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc3e310
+[2025-05-28 10:51:38.869] [PSS] [debug] [11004|14836]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc3e310
+[2025-05-28 10:51:38.869] [PSS] [debug] [11004|14836]streaming_client_impl.cpp:194 InvokeDisconnectFromService: disconnect from service, {client_id: "UwPNkDdtUbco17GR"}, this= 0x17a3dbb83a0
+[2025-05-28 10:51:38.869] [PSS] [error] [11004|23548]transport_client_tcp3.cpp:146 operator (): "not connected", !running_, this= 0x17bedc3e310
+[2025-05-28 10:51:38.869] [PSS] [debug] [11004|23548]transport_client_tcp3.cpp:190 operator (): close socket
+[2025-05-28 10:51:38.869] [PSS] [info] [11004|9568]streaming_client_impl.cpp:44 DisconnectFromService: disconnect from service completed, this= 0x17a3dbb83a0
+[2025-05-28 10:51:38.869] [PSS] [error] [11004|23548]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 1236, msg= 由本地系统中止网络连接。
+[2025-05-28 10:51:38.869] [PSS] [error] [11004|23548]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 1236, this= 0x17bedc3e310
+[2025-05-28 10:51:38.869] [PSS] [error] [11004|23548]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x17bedc3e310
+[2025-05-28 10:51:46.214] [PSS] [debug] [11004|9568]streaming_driver_interface_impl.cpp:19 StreamingDriverInterfaceImpl: callback= 0x17b21cd0e60, this= 0x17b2252bc00
+[2025-05-28 10:51:46.215] [PSS] [error] [11004|9568]streaming_driver_interface_impl.cpp:115 SetTrackingOrigin: streaming not started, this= 0x17b2252bc00
+[2025-05-28 10:51:46.215] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:24 ConnectToService: connect to service, client_id= KpvCDWmBlaXP2fFK, this= 0x17b2252bc00
+[2025-05-28 10:51:46.215] [PSS] [info] [11004|9568]streaming_client_impl.cpp:25 ConnectToService: client_id= KpvCDWmBlaXP2fFK, name= 3D Engine, desp= StreamingSceneRender, this= 0x17c470df070
+[2025-05-28 10:51:46.215] [PSS] [debug] [11004|25864]streaming_client_impl.cpp:137 InvokeConnectToService: connect to service through the network, port= 54000, this= 0x17c470df070
+[2025-05-28 10:51:46.215] [PSS] [debug] [11004|25864]transport_client_tcp3.cpp:34 Start: buffer size(send\recv): 2097152\2097152, this= 0x17bedc557d0
+[2025-05-28 10:51:46.215] [PSS] [info] [11004|25864]transport_client_tcp3.cpp:59 Start: server= 127.0.0.1:54000, local=0.0.0.0:0, this= 0x17bedc557d0
+[2025-05-28 10:51:46.215] [PSS] [info] [11004|20512]streaming_client_impl.cpp:62 NotifyConnectResult: network connect to service result= 0, this= 0x17c470df070
+[2025-05-28 10:51:46.215] [PSS] [debug] [11004|25864]streaming_client_impl.cpp:150 InvokeConnectToServiceByRpc: begin to connect to service by rpc, this= 0x17c470df070
+[2025-05-28 10:51:46.215] [PSS] [debug] [11004|20512]transport_client_tcp3.cpp:136 HandleConnect: local= 127.0.0.1:64068, this= 0x17bedc557d0
+[2025-05-28 10:51:46.215] [PSS] [info] [11004|25864]rpc.cpp:81 Start: start, request id begin from 5692, this= 0x17a6cbd20b0
+[2025-05-28 10:51:46.215] [PSS] [debug] [11004|25864]streaming_client_impl.cpp:171 InvokeConnectToServiceByRpc: connecting to service success, client_id= KpvCDWmBlaXP2fFK, this= 0x17c470df070
+[2025-05-28 10:51:46.216] [PSS] [info] [11004|25864]streaming_client_impl.cpp:238 HandleConnectToServiceResp: connect response {result { description: "Success" } client_id: "KpvCDWmBlaXP2fFK" service_id: "xre_v7Bh8Die" service_version: "2.2.1.9"}, this= 0x17c470df070
+[2025-05-28 10:51:46.216] [PSS] [info] [11004|25864]streaming_driver_interface_impl.cpp:326 NotifyClientConnectResult: client connected, client_id= KpvCDWmBlaXP2fFK, service_version= 2.2.1.9, this= 0x17b2252bc00
+[2025-05-28 10:51:46.216] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:50 StartStreaming: start streaming, {width: 1920 height: 1920 frame_rate: 72}, this= 0x17b2252bc00
+[2025-05-28 10:51:51.347] [PSS] [info] [11004|9568]streaming_driver_interface_impl.cpp:34 DisconnectFromService: disconnect from service, client_id= KpvCDWmBlaXP2fFK, this= 0x17b2252bc00
+[2025-05-28 10:51:51.347] [PSS] [info] [11004|9568]streaming_client_impl.cpp:37 DisconnectFromService: disconnect from service, this= 0x17c470df070
+[2025-05-28 10:51:51.347] [PSS] [debug] [11004|25864]streaming_client_impl.cpp:175 InvokeDisconnectFromService: disconnect from service, this= 0x17c470df070
+[2025-05-28 10:51:51.347] [PSS] [debug] [11004|25864]streaming_client_impl.cpp:253 HandleDisconnectFromServiceResp: disconnect response {}, this= 0x17c470df070
+[2025-05-28 10:51:51.347] [PSS] [debug] [11004|25864]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc557d0
+[2025-05-28 10:51:51.347] [PSS] [debug] [11004|25864]transport_client_tcp3.cpp:79 Stop: called, this= 0x17bedc557d0
+[2025-05-28 10:51:51.347] [PSS] [debug] [11004|25864]streaming_client_impl.cpp:194 InvokeDisconnectFromService: disconnect from service, {client_id: "KpvCDWmBlaXP2fFK"}, this= 0x17c470df070
+[2025-05-28 10:51:51.347] [PSS] [info] [11004|9568]streaming_client_impl.cpp:44 DisconnectFromService: disconnect from service completed, this= 0x17c470df070
+[2025-05-28 10:51:51.348] [PSS] [debug] [11004|20512]transport_client_tcp3.cpp:190 operator (): close socket
+[2025-05-28 10:51:51.348] [PSS] [error] [11004|20512]transport_client_tcp3.cpp:210 HandleReceiveDataResult: receive error= 1236, msg= 由本地系统中止网络连接。
+[2025-05-28 10:51:51.348] [PSS] [error] [11004|20512]transport_client_tcp3.cpp:157 HandleAsyncError: error code: 1236, this= 0x17bedc557d0
+[2025-05-28 10:51:51.348] [PSS] [error] [11004|20512]transport_client_tcp3.cpp:102 ReceiveDataLoop: "not connected", !running_, this= 0x17bedc557d0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -95,6 +96,12 @@ public class WeathDetailData
 
 public class WeatherTools : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI cityNameText;
+    [SerializeField] TextMeshProUGUI ymdText;
+    [SerializeField] TextMeshProUGUI weatherTypeText;
+    [SerializeField] TextMeshProUGUI weekText;
+
+
     public static bool isInitDic = false;
     public static Dictionary<string, string> posToId = new Dictionary<string, string>();
     
@@ -132,18 +139,7 @@ public class WeatherTools : MonoBehaviour
         {
             //Debug.Log(request.downloadHandler.text);
             WeatherData t = LitJson.JsonMapper.ToObject<WeatherData>(request.downloadHandler.text);
-            Debug.Log(t.data.forecast[0].date);
-            Debug.Log(t.data.forecast[0].high);
-            Debug.Log(t.data.forecast[0].low);
-            Debug.Log(t.data.forecast[0].ymd);
-            Debug.Log(t.data.forecast[0].week);
-            Debug.Log(t.data.forecast[0].sunrise);
-            Debug.Log(t.data.forecast[0].sunset);
-            Debug.Log(t.data.forecast[0].aqi);
-            Debug.Log(t.data.forecast[0].fx);
-            Debug.Log(t.data.forecast[0].fl);
-            Debug.Log(t.data.forecast[0].type);
-            Debug.Log(t.data.forecast[0].notice);
+            InitShowInfoCanvas(t);
         }
     }
     public static string GetWeatherId(string name)
@@ -166,5 +162,11 @@ public class WeatherTools : MonoBehaviour
             return posToId[shortName];
         return city_code;
     }
-
+    private void InitShowInfoCanvas(WeatherData _t)
+    {
+        cityNameText.text = _t.cityInfo.city;
+        ymdText.text = _t.data.forecast[0].ymd;
+        weatherTypeText.text = _t.data.forecast[0].type;
+        weekText.text = _t.data.forecast[0].week;
+    }
 }
