@@ -1,0 +1,71 @@
+小雨		14
+小到中雨		14
+中雨		13
+中到大雨		13
+大雨		13
+大到暴雨		12
+暴雨		12
+暴雨到大暴雨	12
+大暴雨		12
+大暴雨到特大暴雨	12
+特大暴雨		12
+冻雨		12
+阵雨		12
+雷阵雨		19
+雨夹雪		12
+雷阵雨伴有冰雹	19
+
+
+
+小雪		18
+小到中雪		18
+中雪		17
+中到大雪		17
+大雪		16
+大到暴雪		16
+暴雪		16
+阵雪		16
+
+晴		0
+多云		4
+阴		10
+
+
+强沙尘暴		22
+扬沙		22		
+沙尘暴		22
+浮尘		22
+雾		9
+霾		9
+
+
+
+Clear			0
+Mostly Clear		1
+Mostly Cloudy		2
+Partly Cloudy		3
+Cloudy			4
+Blowing Leaves		5
+Blowing Pine		6
+Blowing Snow		7
+Blowing Pollen		8
+Foggy			9
+Overcast			10
+Hail			11
+Heavy Rain		12
+Rain			13
+Light Rain			14
+Drizzle			15
+Heavy Snow		16
+Snow			17
+Light Snow		18
+Thunderstorm		19
+Thunder Snow		20
+Lighting Bugs		21
+Dust Storm		22
+Fire Rain			23
+Fire Storm			24
+Red Aroras		25
+Blue Aroras		26
+Mostly Cloudy With Rain	27
+hAZY			28

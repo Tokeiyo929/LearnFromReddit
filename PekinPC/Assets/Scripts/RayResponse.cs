@@ -9,17 +9,25 @@ public class RayResponse : MonoBehaviour
     public GameObject cursorPrefab;
     GameObject currentCursor = null;
     RaycastHit currentHitInfo;
+    GameObject lastOutlineObject;
+    [SerializeField]
+    float cursorHoverOffset = 0.05f;
+
     private void OnEnable()
     {
         RayEventManager.OnObjectHit += ShowCanvas;
         RayEventManager.OnNoObjectHit += HideCanvas;
         RayEventManager.OnObjectStayHit += UpdateCursorPosition;
+        RayEventManager.OnObjectHit += ShowOutline;
+        RayEventManager.OnNoObjectHit += HideOutline;
     }
     private void OnDisable()
     {
         RayEventManager.OnObjectHit -= ShowCanvas;
         RayEventManager.OnNoObjectHit -= HideCanvas;
         RayEventManager.OnObjectStayHit -= UpdateCursorPosition;
+        RayEventManager.OnObjectHit -= ShowOutline;
+        RayEventManager.OnNoObjectHit -= HideOutline;
     }
     private void Update()
     {
@@ -54,8 +62,9 @@ public class RayResponse : MonoBehaviour
         currentHitInfo = _hitInfo;
         if(currentCursor != null)
         {
-            currentCursor.transform.position = _hitInfo.point;
-            currentCursor.transform.rotation = Quaternion.FromToRotation(Vector3.up, _hitInfo.normal);
+            currentCursor.transform.position = _hitInfo.point + _hitInfo.normal * cursorHoverOffset;
+            currentCursor.transform.LookAt(Camera.main.transform.position);
+            currentCursor.transform.Rotate(0, 180, 0);
         }
     }
     void CreateOrUpdateCursor(RaycastHit _hitInfo)
@@ -64,13 +73,15 @@ public class RayResponse : MonoBehaviour
             return;
         if (currentCursor == null)
         {
-            currentCursor = Instantiate(cursorPrefab, _hitInfo.point, Quaternion.identity);
-            currentCursor.transform.rotation = Quaternion.FromToRotation(Vector3.up, _hitInfo.normal);
+            currentCursor = Instantiate(cursorPrefab, _hitInfo.point + _hitInfo.normal * cursorHoverOffset, Quaternion.identity);
+            currentCursor.transform.LookAt(Camera.main.transform.position);
+            currentCursor.transform.Rotate(0, 180, 0);
         }
         else
         {
-            currentCursor.transform.position = _hitInfo.point;
-            currentCursor.transform.rotation = Quaternion.FromToRotation(Vector3.up, _hitInfo.normal);
+            currentCursor.transform.position = _hitInfo.point + _hitInfo.normal * cursorHoverOffset;
+            currentCursor.transform.LookAt(Camera.main.transform.position);
+            currentCursor.transform.Rotate(0, 180, 0);
         }
         currentCursor.SetActive(true);
     }
@@ -83,5 +94,24 @@ public class RayResponse : MonoBehaviour
             return;
         GameObject targetObject = targetTransform.gameObject;
         targetObject.SetActive(isEnabled);
+    }
+    void ShowOutline(GameObject _obj, RaycastHit _hitInfo)
+    {
+        SetOutline(_obj, true);
+        lastOutlineObject = _obj;
+    }
+    void HideOutline()
+    {
+        SetOutline(lastOutlineObject, false);
+    }
+    void SetOutline(GameObject _gameObject, bool _bool)
+    {
+        if (_gameObject == null)
+            return;
+        Outline outline = _gameObject.GetComponent<Outline>();
+        if (outline != null)
+        {
+            outline.enabled = _bool;
+        }
     }
 }

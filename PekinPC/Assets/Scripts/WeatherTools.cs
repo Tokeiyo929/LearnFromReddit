@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UniStorm;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -99,7 +100,8 @@ public class WeatherTools : MonoBehaviour
     [SerializeField] TextMeshProUGUI cityNameText;
     [SerializeField] TextMeshProUGUI ymdText;
     [SerializeField] TextMeshProUGUI weatherTypeText;
-    [SerializeField] TextMeshProUGUI weekText;
+    [SerializeField] TextMeshProUGUI highTempText;
+    [SerializeField] WeatherDataConfig weatherDataConfig;
 
 
     public static bool isInitDic = false;
@@ -140,6 +142,7 @@ public class WeatherTools : MonoBehaviour
             //Debug.Log(request.downloadHandler.text);
             WeatherData t = LitJson.JsonMapper.ToObject<WeatherData>(request.downloadHandler.text);
             InitShowInfoCanvas(t);
+            SetWeather(t);
         }
     }
     public static string GetWeatherId(string name)
@@ -166,7 +169,18 @@ public class WeatherTools : MonoBehaviour
     {
         cityNameText.text = _t.cityInfo.city;
         ymdText.text = _t.data.forecast[0].ymd;
-        weatherTypeText.text = _t.data.forecast[0].type;
-        weekText.text = _t.data.forecast[0].week;
+        weatherTypeText.text = ($"天气：<color=#14FF00>{ _t.data.forecast[0].type}</color>");
+        highTempText.text = ($"温度：<color=#14FF00>最{_t.data.forecast[0].high}</color>");
+    }
+    private void SetWeather(WeatherData _t)
+    {
+        foreach (NameResponseID t in weatherDataConfig.weatherDataConfigs)
+        {
+            if(t.weatherTypeNameCN == _t.data.forecast[0].type)
+            {
+                UniStormManager.Instance?.ChangeWeatherWithTransition(UniStormSystem.Instance.AllWeatherTypes[t.nameResponseID]);
+                break;
+            }
+        }
     }
 }

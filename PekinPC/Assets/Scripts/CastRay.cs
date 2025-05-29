@@ -16,8 +16,9 @@ public class CastRay : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity, ~ignoreLayer))
         {
-            Debug.DrawRay(ray.origin, ray.direction * hitInfo.distance, Color.green);
+            //Debug.DrawRay(ray.origin, ray.direction * hitInfo.distance, Color.green);
             currentObj = hitInfo.collider.gameObject;
+            //SetOuline(currentObj, true);
 
             if (wasHitting)
             {
@@ -40,10 +41,11 @@ public class CastRay : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red);
+            //Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red);
             if (wasHitting)
             {
                 RayEventManager.TrggerNoObjectHit();
+                //SetOuline(LastObj, false);
                 LastObj = null;
                 wasHitting = false;
             }
