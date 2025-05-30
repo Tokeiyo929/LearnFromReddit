@@ -19,7 +19,7 @@ public class RayEventManager : MonoBehaviour
         OnObjectStayHit?.Invoke(_hitInfo);
     }
 
-    public static void TrggerNoObjectHit()
+    public static void TriggerNoObjectHit()
     {
         OnNoObjectHit?.Invoke();
     }

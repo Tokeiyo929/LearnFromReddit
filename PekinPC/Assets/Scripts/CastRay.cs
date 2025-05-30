@@ -28,6 +28,7 @@ public class CastRay : MonoBehaviour
                 }
                 else
                 {
+                    RayEventManager.TriggerNoObjectHit();
                     RayEventManager.TriggerObjectHit(currentObj, hitInfo);
                     LastObj = currentObj;
                 }
@@ -44,7 +45,7 @@ public class CastRay : MonoBehaviour
             //Debug.DrawRay(ray.origin, ray.direction * 1000, Color.red);
             if (wasHitting)
             {
-                RayEventManager.TrggerNoObjectHit();
+                RayEventManager.TriggerNoObjectHit();
                 //SetOuline(LastObj, false);
                 LastObj = null;
                 wasHitting = false;

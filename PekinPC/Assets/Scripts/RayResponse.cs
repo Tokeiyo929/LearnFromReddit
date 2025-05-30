@@ -1,33 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class RayResponse : MonoBehaviour
 {
-    public Canvas mainCanvas;
-    GameObject currentShownObj = null;
-    public GameObject cursorPrefab;
-    GameObject currentCursor = null;
-    RaycastHit currentHitInfo;
-    GameObject lastOutlineObject;
     [SerializeField]
     float cursorHoverOffset = 0.05f;
+    public Canvas mainCanvas;
+    public GameObject cursorPrefab;
+    
+    private GameObject currentCursor = null;
+    private GameObject currentShownObj = null;
+    private GameObject lastOutlineObject;
 
+    public Transform carryParent;
     private void OnEnable()
     {
-        RayEventManager.OnObjectHit += ShowCanvas;
-        RayEventManager.OnNoObjectHit += HideCanvas;
         RayEventManager.OnObjectStayHit += UpdateCursorPosition;
-        RayEventManager.OnObjectHit += ShowOutline;
-        RayEventManager.OnNoObjectHit += HideOutline;
+        RayEventManager.OnObjectStayHit += PickObject;
+        RayEventManager.OnObjectHit += HandleObjectHit;
+        RayEventManager.OnNoObjectHit += HandleNoObjectHit;
     }
     private void OnDisable()
     {
-        RayEventManager.OnObjectHit -= ShowCanvas;
-        RayEventManager.OnNoObjectHit -= HideCanvas;
         RayEventManager.OnObjectStayHit -= UpdateCursorPosition;
-        RayEventManager.OnObjectHit -= ShowOutline;
-        RayEventManager.OnNoObjectHit -= HideOutline;
+        RayEventManager.OnObjectStayHit -= PickObject;
+        RayEventManager.OnObjectHit -= HandleObjectHit;
+        RayEventManager.OnNoObjectHit -= HandleNoObjectHit;
     }
     private void Update()
     {
@@ -36,14 +37,26 @@ public class RayResponse : MonoBehaviour
             SetCanvasEnabled(currentShownObj, true);
         }
     }
-    void ShowCanvas(GameObject _obj, RaycastHit _hitInfo)
+    void HandleObjectHit(GameObject _obj, RaycastHit _hitInfo)
+    {
+        ShowCanvas(_obj);
+        ShowOutline(_obj);
+        CreateOrUpdateCursor(_hitInfo);
+    }
+    void HandleNoObjectHit()
+    {
+        HideCanvas();
+        HideOutline();
+    }
+
+    #region Canvas相关
+    void ShowCanvas(GameObject _obj)
     {
         if(currentShownObj != null && currentShownObj != _obj)
         {
             SetCanvasEnabled(currentShownObj, false);
         }
         currentShownObj = _obj;
-        CreateOrUpdateCursor(_hitInfo);
     }
     void HideCanvas()
     {
@@ -57,45 +70,44 @@ public class RayResponse : MonoBehaviour
             currentCursor.SetActive(false);
         }
     }
+    void SetCanvasEnabled(GameObject _obj, bool isEnabled)
+    {
+        if (mainCanvas == null) return;
+        Transform targetTransform = mainCanvas.transform.Find(_obj.name);
+        if (targetTransform == null) return;
+        GameObject targetObject = targetTransform.gameObject;
+        targetObject.SetActive(isEnabled);
+    }
+    #endregion
+
+    #region Cursor相关
     void UpdateCursorPosition(RaycastHit _hitInfo)
     {
-        currentHitInfo = _hitInfo;
         if(currentCursor != null)
         {
-            currentCursor.transform.position = _hitInfo.point + _hitInfo.normal * cursorHoverOffset;
-            currentCursor.transform.LookAt(Camera.main.transform.position);
-            currentCursor.transform.Rotate(0, 180, 0);
+            PositionCursor(_hitInfo);
         }
     }
     void CreateOrUpdateCursor(RaycastHit _hitInfo)
     {
-        if (cursorPrefab == null)
-            return;
+        if (cursorPrefab == null) return;
         if (currentCursor == null)
         {
-            currentCursor = Instantiate(cursorPrefab, _hitInfo.point + _hitInfo.normal * cursorHoverOffset, Quaternion.identity);
-            currentCursor.transform.LookAt(Camera.main.transform.position);
-            currentCursor.transform.Rotate(0, 180, 0);
+            currentCursor = Instantiate(cursorPrefab);
         }
-        else
-        {
-            currentCursor.transform.position = _hitInfo.point + _hitInfo.normal * cursorHoverOffset;
-            currentCursor.transform.LookAt(Camera.main.transform.position);
-            currentCursor.transform.Rotate(0, 180, 0);
-        }
+        PositionCursor(_hitInfo);
         currentCursor.SetActive(true);
     }
-    void SetCanvasEnabled(GameObject _obj, bool isEnabled)
+    void PositionCursor(RaycastHit _hitInfo)
     {
-        if (mainCanvas == null)
-            return;
-        Transform targetTransform = mainCanvas.transform.Find(_obj.name);
-        if (targetTransform == null)
-            return;
-        GameObject targetObject = targetTransform.gameObject;
-        targetObject.SetActive(isEnabled);
+        currentCursor.transform.position = _hitInfo.point + _hitInfo.normal * cursorHoverOffset;
+        currentCursor.transform.LookAt(Camera.main.transform.position);
+        currentCursor.transform.Rotate(0, 180, 0);
     }
-    void ShowOutline(GameObject _obj, RaycastHit _hitInfo)
+    #endregion
+
+    #region Outline相关
+    void ShowOutline(GameObject _obj)
     {
         SetOutline(_obj, true);
         lastOutlineObject = _obj;
@@ -112,6 +124,23 @@ public class RayResponse : MonoBehaviour
         if (outline != null)
         {
             outline.enabled = _bool;
+        }
+    }
+    #endregion
+
+    void PickObject(RaycastHit _hitInfo)
+    {
+        GameObject _obj = _hitInfo.collider.gameObject;
+        if (Input.GetMouseButtonDown(0))
+        {
+            _obj.transform.parent = carryParent;
+            _obj.transform.localPosition = Vector3.zero;
+            _obj.transform.localEulerAngles = Vector3.zero;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            _obj.transform.parent = null;
+            _obj.transform.localEulerAngles = new Vector3(0, _obj.transform.localEulerAngles.y, 0);
         }
     }
 }
