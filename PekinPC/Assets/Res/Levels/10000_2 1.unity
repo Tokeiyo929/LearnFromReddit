@@ -11996,12 +11996,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847390c468376a949bb636fc9aa36803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 259925742}
+  target: {fileID: 489668234}
   distance: 5
-  minDistance: 1
-  maxDistance: 10
+  maxDistance: 30
+  minDistance: 5
   zoomSpeed: 5
-  rotateSpeed: 5
+  rotateSpeed: 10
 --- !u!1001 &963407518
 PrefabInstance:
   m_ObjectHideFlags: 0
