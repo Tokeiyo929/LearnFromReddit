@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638828055172449720
-    m_Hash: 433308394
+      ticks: 638834953285548112
+    m_Hash: 553435570
   m_LockFileStatus:
     m_FilePath: D:/zpurojekuto/LearnFromReddit/kuruma/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638828055507593696
-    m_Hash: 2959456785
+      ticks: 638834953285548112
+    m_Hash: 1891610814
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

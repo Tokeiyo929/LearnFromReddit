@@ -130,6 +130,8 @@ public class RayResponse : MonoBehaviour
 
     void PickObject(RaycastHit _hitInfo)
     {
+        if (_hitInfo.collider.gameObject.layer != 9)
+            return;
         GameObject _obj = _hitInfo.collider.gameObject;
         if (Input.GetMouseButtonDown(0))
         {

@@ -7,9 +7,9 @@ public class SphereCameraController : MonoBehaviour
 
     [SerializeField] Transform target;
 
-    [SerializeField] float distance = 10f;
-    [SerializeField] float maxDistance = 30f;
-    [SerializeField] float minDistance = 5f;
+    [SerializeField] float distance = 20f;
+    [SerializeField] float maxDistance = 20f;
+    [SerializeField] float minDistance = 1f;
 
     [SerializeField] float zoomSpeed = 5f;
     [SerializeField] float rotateSpeed = 10f;

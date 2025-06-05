@@ -1,31 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static MoveMiniCamera;
 
 public class MoveMiniCamera : MonoBehaviour
 {
-    [System.Serializable]
-    public class cameraZone
-    {
-        public float minY;
-        public float maxY;
-        public float cameraY;
-    }
+    [SerializeField] Transform playerTrans;
 
-    [SerializeField] GameObject player;
-    [SerializeField] List<cameraZone> cameraZones;
-
-    // Update is called once per frame
     void Update()
     {
-        float currentPlayerYPosition = player.transform.position.y;
-        foreach(var _cameraZone in cameraZones)
-        {
-            if (currentPlayerYPosition >= _cameraZone.minY && currentPlayerYPosition <= _cameraZone.maxY)
-            {
-                transform.position = new Vector3(transform.position.x, _cameraZone.cameraY, transform.position.z);
-                break;
-            }
-        }
+        float currentPlayerYPosition = playerTrans.position.y;
+        transform.position = new Vector3(playerTrans.position.x, currentPlayerYPosition + 2f, playerTrans.position.z);
     }
 }

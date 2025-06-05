@@ -98,9 +98,9 @@ public class WeathDetailData
 public class WeatherTools : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI cityNameText;
-    [SerializeField] TextMeshProUGUI ymdText;
+    [SerializeField] TextMeshProUGUI wetText;
     [SerializeField] TextMeshProUGUI weatherTypeText;
-    [SerializeField] TextMeshProUGUI highTempText;
+    [SerializeField] TextMeshProUGUI TempText;
     [SerializeField] WeatherDataConfig weatherDataConfig;
 
 
@@ -168,9 +168,9 @@ public class WeatherTools : MonoBehaviour
     private void InitShowInfoCanvas(WeatherData _t)
     {
         cityNameText.text = _t.cityInfo.city;
-        ymdText.text = _t.data.forecast[0].ymd;
+        wetText.text = ($"湿度：<color=#14FF00>{_t.data.shidu}</color>");
         weatherTypeText.text = ($"天气：<color=#14FF00>{ _t.data.forecast[0].type}</color>");
-        highTempText.text = ($"温度：<color=#14FF00>最{_t.data.forecast[0].high}</color>");
+        TempText.text = ($"温度：<color=#14FF00>{_t.data.wendu}</color>");
     }
     private void SetWeather(WeatherData _t)
     {

@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|d:\\zpurojekuto\\learnfromreddit\\kuruma\\assets\\scripts\\kuruma\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|d:\\zpurojekuto\\learnfromreddit\\kuruma\\assets\\scripts\\weather\\weathertimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weather\\weathertimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|d:\\zpurojekuto\\learnfromreddit\\kuruma\\assets\\scripts\\weather\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weather\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|D:\\zpurojekuto\\LearnFromReddit\\kuruma\\assets\\scripts\\kuruma\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\kuruma\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|d:\\zpurojekuto\\learnfromreddit\\kuruma\\assets\\scripts\\objectpool\\objectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|D:\\zpurojekuto\\LearnFromReddit\\kuruma\\assets\\scripts\\objectpool\\objectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectpool\\objectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,12 +23,12 @@
       "RelativeMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectpool\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|D:\\zpurojekuto\\LearnFromReddit\\kuruma\\assets\\scripts\\infokuruma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B1B0B57-F054-2EE7-EFA5-EE0495188426}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\infokuruma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\kuruma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\kuruma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\InfoKuruma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\InfoKuruma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +54,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherState.cs",
+              "DocumentMoniker": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\Weather\\WeatherState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weather\\WeatherState.cs",
+              "ToolTip": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\Weather\\WeatherState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weather\\WeatherState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:17:39.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WeatherTimer.cs",
+              "DocumentMoniker": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\Weather\\WeatherTimer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weather\\WeatherTimer.cs",
+              "ToolTip": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\Weather\\WeatherTimer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weather\\WeatherTimer.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T07:52:36.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CarController.cs",
               "DocumentMoniker": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\Kuruma\\CarController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Kuruma\\CarController.cs",
@@ -54,12 +88,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Kuruma\\CarController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T02:17:01.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T02:17:01.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ObjectManager.cs",
               "DocumentMoniker": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\ObjectPool\\ObjectManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectPool\\ObjectManager.cs",
@@ -67,12 +100,11 @@
               "RelativeToolTip": "Assets\\Scripts\\ObjectPool\\ObjectManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:30:30.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T08:30:30.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ObjectPool.cs",
               "DocumentMoniker": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\ObjectPool\\ObjectPool.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectPool\\ObjectPool.cs",
@@ -84,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "InfoKuruma.cs",
               "DocumentMoniker": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\InfoKuruma.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InfoKuruma.cs",
@@ -96,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "kuruma.cs",
               "DocumentMoniker": "D:\\zpurojekuto\\LearnFromReddit\\kuruma\\Assets\\Scripts\\kuruma.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\kuruma.cs",
@@ -126,6 +158,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         },
