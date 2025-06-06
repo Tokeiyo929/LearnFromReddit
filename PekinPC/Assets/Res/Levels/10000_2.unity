@@ -4881,11 +4881,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5179654807377703828, guid: 4725c04ddbe08f44f8c80bfa40a06271, type: 3}
   m_PrefabInstance: {fileID: 168779762}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &169994046 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6321942233446250148, guid: 0ea634878ee215140b12e063e6bfafc0, type: 3}
-  m_PrefabInstance: {fileID: 1094354708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &201531749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8924,8 +8919,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1456222550}
   - {fileID: 1762264006}
+  - {fileID: 1094354709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &429341226
@@ -17789,6 +17784,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea634878ee215140b12e063e6bfafc0, type: 3}
+--- !u!4 &1094354709 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2840400973210120170, guid: 0ea634878ee215140b12e063e6bfafc0, type: 3}
+  m_PrefabInstance: {fileID: 1094354708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1094354710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1801111999616982717, guid: 0ea634878ee215140b12e063e6bfafc0, type: 3}
+  m_PrefabInstance: {fileID: 1094354708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1098564623
 GameObject:
   m_ObjectHideFlags: 0
@@ -22671,11 +22676,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &1456222550 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1717286620142286210, guid: 0ea634878ee215140b12e063e6bfafc0, type: 3}
-  m_PrefabInstance: {fileID: 1094354708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1461108876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26335,6 +26335,7 @@ GameObject:
   - component: {fileID: 1762264005}
   - component: {fileID: 1762264004}
   - component: {fileID: 1762264003}
+  - component: {fileID: 1762264007}
   m_Layer: 0
   m_Name: Camera (1)
   m_TagString: Untagged
@@ -26354,7 +26355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847390c468376a949bb636fc9aa36803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 169994046}
+  target: {fileID: 1094354710}
   distance: 20
   maxDistance: 20
   minDistance: 1
@@ -26434,6 +26435,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 428661289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762264007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762264002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3cea10e997aba4e8ba55a0c9652aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 1762264005}
+  sphereCameraController: {fileID: 1762264003}
 --- !u!1001 &1762731440
 PrefabInstance:
   m_ObjectHideFlags: 0

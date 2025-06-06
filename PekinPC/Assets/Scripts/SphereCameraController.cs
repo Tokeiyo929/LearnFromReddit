@@ -5,7 +5,7 @@ using UnityEngine;
 public class SphereCameraController : MonoBehaviour
 {
 
-    [SerializeField] Transform target;
+    public Transform target;
 
     [SerializeField] float distance = 20f;
     [SerializeField] float maxDistance = 20f;
@@ -15,8 +15,8 @@ public class SphereCameraController : MonoBehaviour
     [SerializeField] float rotateSpeed = 10f;
 
     Vector3 lastMousePosition;
-    float currentY = 0f;
-    float currentX = 0f;
+    float currentY = 25f;
+    float currentX = 90f;
 
     private void Start()
     {
@@ -46,5 +46,12 @@ public class SphereCameraController : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         transform.position = (target.position + rotation * dir);
         transform.LookAt(target);
+    }
+    public void ChangeTarget(Transform trans)
+    {
+        target = trans;
+        currentY = 45f;
+        currentX = 90f;
+        distance = 2.5f;
     }
 }
