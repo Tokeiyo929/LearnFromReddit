@@ -39,7 +39,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GlossMapScale: 0.88
+    - _GlossMapScale: 0.7
     m_Colors:
     - _Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_BuildTextureStacks: []
