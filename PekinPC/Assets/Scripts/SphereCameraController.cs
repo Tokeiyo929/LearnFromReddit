@@ -14,6 +14,10 @@ public class SphereCameraController : MonoBehaviour
     [SerializeField] float zoomSpeed = 5f;
     [SerializeField] float rotateSpeed = 10f;
 
+    float smoothTime = 0.3f;
+    Vector3 desiredPosition;
+    Quaternion desiredRotation;
+
     Vector3 lastMousePosition;
     float currentY = 25f;
     float currentX = 90f;
@@ -44,8 +48,13 @@ public class SphereCameraController : MonoBehaviour
             return;
         Vector3 dir = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        transform.position = (target.position + rotation * dir);
-        transform.LookAt(target);
+        //transform.position = (target.position + rotation * dir);
+        desiredPosition = (target.position + rotation * dir);
+        //transform.LookAt(target);
+        desiredRotation = Quaternion.LookRotation(target.position - desiredPosition);
+
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime / smoothTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, Time.deltaTime / smoothTime);
     }
     public void ChangeTarget(Transform trans)
     {

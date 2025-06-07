@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowardsPlayer : MonoBehaviour
 {
+    
     Transform playerTransform;
     Canvas IntroduceUI;
     float distanceValve = 25f;

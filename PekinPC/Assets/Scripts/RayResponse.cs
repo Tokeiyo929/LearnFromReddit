@@ -6,104 +6,108 @@ using UnityEngine;
 
 public class RayResponse : MonoBehaviour
 {
-    [SerializeField]
-    float cursorHoverOffset = 0.05f;
-    public Canvas mainCanvas;
-    public GameObject cursorPrefab;
-    
-    private GameObject currentCursor = null;
-    private GameObject currentShownObj = null;
-    private GameObject lastOutlineObject;
+    //[SerializeField]
+    //float cursorHoverOffset = 0.05f;
+    //public Canvas mainCanvas;
+    //public GameObject cursorPrefab;
+
+    //private GameObject currentCursor = null;
+    //private GameObject currentShownObj = null;
 
     public Transform carryParent;
+    private GameObject lastOutlineObject;
+
     private void OnEnable()
     {
-        RayEventManager.OnObjectStayHit += UpdateCursorPosition;
-        RayEventManager.OnObjectStayHit += PickObject;
+        RayEventManager.OnObjectStayHit += HandleObjectStayHit;
         RayEventManager.OnObjectHit += HandleObjectHit;
         RayEventManager.OnNoObjectHit += HandleNoObjectHit;
     }
     private void OnDisable()
     {
-        RayEventManager.OnObjectStayHit -= UpdateCursorPosition;
-        RayEventManager.OnObjectStayHit -= PickObject;
+        RayEventManager.OnObjectStayHit -= HandleObjectStayHit;
         RayEventManager.OnObjectHit -= HandleObjectHit;
         RayEventManager.OnNoObjectHit -= HandleNoObjectHit;
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F) && currentShownObj != null)
-        {
-            SetCanvasEnabled(currentShownObj, true);
-        }
+        //if(Input.GetKeyDown(KeyCode.F) && currentShownObj != null)
+        //{
+        //    SetCanvasEnabled(currentShownObj, true);
+        //}
     }
     void HandleObjectHit(GameObject _obj, RaycastHit _hitInfo)
     {
-        ShowCanvas(_obj);
+        //ShowCanvas(_obj);
         ShowOutline(_obj);
-        CreateOrUpdateCursor(_hitInfo);
+        //CreateOrUpdateCursor(_hitInfo);
+    }
+    void HandleObjectStayHit(RaycastHit _hitInfo)
+    {
+        PickObject(_hitInfo);
+        //UpdateCursorPosition(_hitInfo);
     }
     void HandleNoObjectHit()
     {
-        HideCanvas();
+        //HideCanvas();
         HideOutline();
     }
 
     #region Canvas相关
-    void ShowCanvas(GameObject _obj)
-    {
-        if(currentShownObj != null && currentShownObj != _obj)
-        {
-            SetCanvasEnabled(currentShownObj, false);
-        }
-        currentShownObj = _obj;
-    }
-    void HideCanvas()
-    {
-        if (currentShownObj != null)
-        {
-            SetCanvasEnabled(currentShownObj, false);
-            currentShownObj = null;
-        }
-        if(currentCursor != null)
-        {
-            currentCursor.SetActive(false);
-        }
-    }
-    void SetCanvasEnabled(GameObject _obj, bool isEnabled)
-    {
-        if (mainCanvas == null) return;
-        Transform targetTransform = mainCanvas.transform.Find(_obj.name);
-        if (targetTransform == null) return;
-        GameObject targetObject = targetTransform.gameObject;
-        targetObject.SetActive(isEnabled);
-    }
+    //void ShowCanvas(GameObject _obj)
+    //{
+    //    if(currentShownObj != null && currentShownObj != _obj)
+    //    {
+    //        SetCanvasEnabled(currentShownObj, false);
+    //    }
+    //    currentShownObj = _obj;
+    //}
+    //void HideCanvas()
+    //{
+    //    if (currentShownObj != null)
+    //    {
+    //        SetCanvasEnabled(currentShownObj, false);
+    //        currentShownObj = null;
+    //    }
+    //    //if(currentCursor != null)
+    //    //{
+    //    //    currentCursor.SetActive(false);
+    //    //}
+    //}
+    //void SetCanvasEnabled(GameObject _obj, bool isEnabled)
+    //{
+    //    if (mainCanvas == null) return;
+    //    Transform targetTransform = mainCanvas.transform.Find(_obj.name);
+    //    if (targetTransform == null) return;
+    //    GameObject targetObject = targetTransform.gameObject;
+    //    targetObject.SetActive(isEnabled);
+    //}
     #endregion
 
     #region Cursor相关
-    void UpdateCursorPosition(RaycastHit _hitInfo)
-    {
-        if(currentCursor != null)
-        {
-            PositionCursor(_hitInfo);
-        }
-    }
-    void CreateOrUpdateCursor(RaycastHit _hitInfo)
-    {
-        if (cursorPrefab == null) return;
-        if (currentCursor == null)
-        {
-            currentCursor = Instantiate(cursorPrefab);
-        }
-        PositionCursor(_hitInfo);
-        currentCursor.SetActive(true);
-    }
-    void PositionCursor(RaycastHit _hitInfo)
-    {
-        currentCursor.transform.position = _hitInfo.point + _hitInfo.normal * cursorHoverOffset;
-        currentCursor.transform.LookAt(Camera.main.transform.position);
-        currentCursor.transform.Rotate(0, 180, 0);
-    }
+    //void UpdateCursorPosition(RaycastHit _hitInfo)
+    //{
+    //    if(currentCursor != null)
+    //    {
+    //        PositionCursor(_hitInfo);
+    //    }
+    //}
+    //void CreateOrUpdateCursor(RaycastHit _hitInfo)
+    //{
+    //    if (cursorPrefab == null) return;
+    //    if (currentCursor == null)
+    //    {
+    //        currentCursor = Instantiate(cursorPrefab);
+    //    }
+    //    PositionCursor(_hitInfo);
+    //    currentCursor.SetActive(true);
+    //}
+    //void PositionCursor(RaycastHit _hitInfo)
+    //{
+    //    currentCursor.transform.position = _hitInfo.point + _hitInfo.normal * cursorHoverOffset;
+    //    currentCursor.transform.LookAt(Camera.main.transform.position);
+    //    currentCursor.transform.Rotate(0, 180, 0);
+    //}
     #endregion
 
     #region Outline相关
