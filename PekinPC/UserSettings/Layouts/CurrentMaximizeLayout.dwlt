@@ -94,7 +94,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -506,9 +506,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.08744846, y: -1.9373604, z: 13.909185}
+    m_Target: {x: 708.5116, y: 374.98642, z: -51.88541}
     speed: 2
-    m_Value: {x: -0.08744846, y: -1.9373604, z: 13.909185}
+    m_Value: {x: 708.5116, y: 374.98642, z: -51.88541}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -554,13 +554,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.07382256, y: 0.7648777, z: -0.08968882, w: 0.63397926}
+    m_Target: {x: 0.023283876, y: -0.13536519, z: 0.002468613, w: 0.9908709}
     speed: 2
-    m_Value: {x: 0.07380553, y: 0.7647013, z: -0.08966814, w: 0.63383305}
+    m_Value: {x: -0.023283876, y: 0.13536519, z: -0.0024686127, w: -0.9908709}
   m_Size:
-    m_Target: 0.22394408
+    m_Target: 90.66581
     speed: 2
-    m_Value: 0.22394408
+    m_Value: 90.66581
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -708,10 +708,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 691}
-      m_SelectedIDs: da15f4ff
-      m_LastClickedID: -780838
-      m_ExpandedIDs: 0286f2ff0e86f2ff548cf2ff1ea1f3ffaadcf3ffacdcf3ff7807f4ff7a07f4ffee15f4fff015f4ffe024f4ffba4ff4ffc08af4ff8ab8f4ffd450f5ffe050f5fffc85f5ff0886f5ff6c53f6ff7853f6ff9c9ef6ffa89ef6ff7c12f7ff8812f7ff885df7ff945df7ffe6c5f7ff00c6f7ff1cc6f7ff2ac6f7ff2accf7fff6cdf7ffdecef7ffe2cef7ffe6cef7ffaacff7ff0ed0f7ff56d2f7ff6ad2f7ffbed2f7ffc2d2f7ffc6d2f7ff64d5f7ff68d5f7ff20d6f7ff20dbf7ff60dbf7ff6cdbf7ff6cdef7ffe4def7fff0def7ff2edff7ff32dff7ff36dff7ff80e0f7ffa8e2f7fface2f7ffaee2f7ff6c5ff8ff34cbf8ff6656f9ffe681f9ffc4bcf9ffd4e8f9ff5823fafffabbfdffc0bcfdffd2c0fdff62f2fdff5801feff5206feff0237feff5698feff6a98feffc698feff1ea1feff80a6feffa8a8feffaaa8fefff0b6feff72e5feff9831ffffd662ffff469dffff2cfbffff52ba01002a04020086040200ee050200920702006c08020026770400e49804007ef2080082f3080046f508009af50800a0f60800eaf6080084f70800b0f70800c4f70800d6f90800b8fa0800
+      scrollPos: {x: 0, y: 540}
+      m_SelectedIDs: 18dde9ff
+      m_LastClickedID: -1450728
+      m_ExpandedIDs: 3234e9ffb889e9ff18dde9ff0806f2ff0a06f2ff2006f2ff3006f2ff3206f2ff3806f2ff4806f2ff3c07f2ffb007f2ffc607f2ffb608f2ff960af2ffdc0af2ff4e0cf2ffe80cf2ff120ef2ff0611f2ff1212f2ff9a12f2ffe612f2ff7835fbff163efbff0ab0ffff0cb0ffff48b0ffff4ab0ffff5ab0ffff18b1ffff1ab1ffff48b1ffff4ab1ffff92b1ffff94b1ffffecb2fffffeb2ffff0eb3ffff96b3fffffeb4ffff00b5ffff12b5ffff14b5ffff46b6ffff48b6ffff38b7ffff3ab7ffff36b9ffff38b9ffff74baffff76baffff02bbffff36bcffff38bcffff4ec2ffff5ac2ffff68c2ffff84c2ffffd2c8ffffc6caffffaecbffffb2cbffff46cdffff4acdffff4ecdffff92cdffff96cdffff9acdffffcecdffffd2cdffffd6cdffff0aceffff0eceffff12ceffff8eceffff92ceffff96ceffff26cfffff3acfffff8ecfffff92cfffff68d1ffff36d2fffff2d2ffffb2d3ffff1ad5ffffead7ffff82dfffff84dfffffbadfffffbcdfffffdcdfffff42e0ffff44e0ffffd4e3ffffd6e3ffff5ae4ffff6ee5ffff70e5ffffdce7ffffdee7ffffe2e9ffffe4e9ffff08eaffff0aeaffff2eeaffff30eaffff6eeaffff70eaffff78edffff7aedffff76eeffff78eeffffeaeefffff6eeffffaaefffffacefffffdaefffffdcefffff10f1ffff12f1ffff32f2ffffd0f3ffffd2f3fffff4f3ffff12f4ffff6cf4ffff6ef4ffff6cf6ffff6ef6ffff60f7ffff86f8ffff88f8ffff0af9ffff0cf9ffffc6f9ffffc8f9ffff06faffff08faffffc4faffffc6faffff08fbffff2cfbffff0a6200003c640000726400003865000062650000be6500002866000092660000f2660000266700007e68000080680000946800006469000090690000a4690000906a0000b06a0000e86a0000b66b00008c6c0000d46c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -806,7 +806,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -814,16 +814,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\zpurojekuto\LearnFromReddit\PekinPC
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 76ee0100
-    m_LastClickedID: 126582
-    m_ExpandedIDs: 0000000022b5000024b5000026b5000028b500002ab500002cb50000e8b8000000ca9a3bffffff7f
+    m_SelectedIDs: 40ba0000
+    m_LastClickedID: 47680
+    m_ExpandedIDs: 00000000b2b90000b4b90000b6b90000b8b90000bab90000bcb9000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -851,7 +851,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000022b5000024b5000026b5000028b500002ab500002cb5000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b2b90000b4b90000b6b90000b8b90000bab90000bcb9000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -876,8 +876,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: da15f4ff
-    m_LastClickedInstanceID: -780838
+    m_SelectedInstanceIDs: 18dde9ff
+    m_LastClickedInstanceID: -1450728
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000d6620000708b000000000000
     m_RenameOverlay:
@@ -926,8 +926,8 @@ MonoBehaviour:
     y: 0
     width: 429
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}

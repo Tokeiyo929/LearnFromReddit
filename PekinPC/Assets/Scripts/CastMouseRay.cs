@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class CastMouseRay : MonoBehaviour
 {
+    [SerializeField] private Camera _camera;
     private RaycastHit _hitInfo;
-    [SerializeField]
-    private Camera _camera;
-    [SerializeField]
-    SphereCameraController sphereCameraController;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +19,10 @@ public class CastMouseRay : MonoBehaviour
         if(Physics.Raycast(r, out _hitInfo, 100f))
         {
             
-            if (Input.GetMouseButtonDown(0))
-            {
-                sphereCameraController.ChangeTarget(_hitInfo.transform);
-            }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    sphereCameraController.ChangeTarget(_hitInfo.transform);
+            //}
         }
     }
 }

@@ -46,6 +46,7 @@ public class RayResponse : MonoBehaviour
     {
         PickObject(_hitInfo);
         //UpdateCursorPosition(_hitInfo);
+        OpenDoor(_hitInfo);
     }
     void HandleNoObjectHit()
     {
@@ -132,6 +133,7 @@ public class RayResponse : MonoBehaviour
     }
     #endregion
 
+    #region Pick物体相关
     void PickObject(RaycastHit _hitInfo)
     {
         if (_hitInfo.collider.gameObject.layer != 9)
@@ -148,5 +150,41 @@ public class RayResponse : MonoBehaviour
             _obj.transform.parent = null;
             _obj.transform.localEulerAngles = new Vector3(0, _obj.transform.localEulerAngles.y, 0);
         }
+    }
+    #endregion
+
+    void OpenDoor(RaycastHit _hitInfo)
+    {
+        if (_hitInfo.collider.gameObject.layer != 10)
+            return;
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Transform _objTrans = _hitInfo.collider.gameObject.transform;
+            DoorController doorController = _objTrans.GetComponent<DoorController>();
+
+            if(doorController != null)
+            {
+                doorController.ToggleDoor();
+                float targetAngle = doorController.isOpen ? doorController.openAngle : doorController.closeAngle;
+                StartCoroutine(RotateDoorCoroutine(_objTrans, targetAngle, 0.3f));
+            }
+        }
+        
+    }
+    IEnumerator RotateDoorCoroutine(Transform _objTrans, float _angle, float _duration)
+    {
+        Quaternion startRot = _objTrans.rotation;
+        Quaternion endRot = Quaternion.Euler(_objTrans.eulerAngles.x, _angle, _objTrans.eulerAngles.z);
+        float elapsed = 0f;
+        while(elapsed < _duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / _duration); 
+            _objTrans.rotation = Quaternion.Slerp(startRot, endRot, t);
+            yield return null;
+        }
+        _objTrans.rotation = endRot;
+        
     }
 }

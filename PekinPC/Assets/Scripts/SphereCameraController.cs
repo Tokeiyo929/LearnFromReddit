@@ -48,19 +48,11 @@ public class SphereCameraController : MonoBehaviour
             return;
         Vector3 dir = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        //transform.position = (target.position + rotation * dir);
+
         desiredPosition = (target.position + rotation * dir);
-        //transform.LookAt(target);
         desiredRotation = Quaternion.LookRotation(target.position - desiredPosition);
 
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime / smoothTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, Time.deltaTime / smoothTime);
-    }
-    public void ChangeTarget(Transform trans)
-    {
-        target = trans;
-        currentY = 45f;
-        currentX = 90f;
-        distance = 2.5f;
     }
 }
