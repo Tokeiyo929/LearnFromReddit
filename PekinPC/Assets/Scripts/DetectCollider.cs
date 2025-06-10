@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class DetectCollider : MonoBehaviour
 {
-    //碰撞检测，打印碰撞物体名称
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("碰撞物体名称：" + other.gameObject.name);
-    }
-
+    
     private CharacterController character;
     private float speedRate = 4f;
+
+    public Transform cameraTransform;
+    private float pitch = 0f;
+    private float rotateSpeed = 100f;
 
     private void Start()
     {
@@ -23,27 +22,26 @@ public class DetectCollider : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
 
-        // 根据物体当前朝向计算移动方向
         Vector3 moveDirection = transform.forward * ver + transform.right * hor;
         Vector3 speed = moveDirection * speedRate;
 
         character.SimpleMove(speed);
+
+        RotateView();
     }
 
-    //鼠标控制旋转
-    private void LateUpdate()
+    private void RotateView()
     {
-        float rotateSpeed = 100f;
         float rotateHorizontal = Input.GetAxis("Mouse X");
         float rotateVertical = Input.GetAxis("Mouse Y");
 
-        // 更合理的旋转方式，避免z轴问题
         transform.Rotate(Vector3.up, rotateHorizontal * rotateSpeed * Time.deltaTime, Space.World);
-        transform.Rotate(Vector3.right, -rotateVertical * rotateSpeed * Time.deltaTime, Space.Self);
+        
+        pitch -= rotateVertical * rotateSpeed * Time.deltaTime;
+        pitch = Mathf.Clamp(pitch, -80f, 80f);
 
-        // 锁定z轴旋转（如果需要）
-        Vector3 euler = transform.eulerAngles;
-        euler.z = 0;
-        transform.eulerAngles = euler;
+        if(cameraTransform != null)
+            cameraTransform.localEulerAngles = new Vector3(pitch, 0f, 0f);
+
     }
 }

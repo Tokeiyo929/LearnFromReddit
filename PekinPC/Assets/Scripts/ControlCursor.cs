@@ -5,15 +5,9 @@ using UnityEngine;
 
 public class ControlCursor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

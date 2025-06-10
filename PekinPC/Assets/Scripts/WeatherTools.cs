@@ -170,7 +170,7 @@ public class WeatherTools : MonoBehaviour
         cityNameText.text = _t.cityInfo.city;
         wetText.text = ($"湿度：<color=#14FF00>{_t.data.shidu}</color>");
         weatherTypeText.text = ($"天气：<color=#14FF00>{ _t.data.forecast[0].type}</color>");
-        TempText.text = ($"温度：<color=#14FF00>{_t.data.wendu}</color>");
+        TempText.text = ($"温度：<color=#14FF00>{_t.data.wendu}℃</color>");
     }
     private void SetWeather(WeatherData _t)
     {
