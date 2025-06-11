@@ -22,4 +22,10 @@ public class MovePlayer3D : MonoBehaviour
         transform.position = _trans.position;
         character.enabled = true;
     }
+    public void MoveTo(Vector3 _pos)
+    {
+        character.enabled = false;
+        transform.position = _pos;
+        character.enabled = true;
+    }
 }
