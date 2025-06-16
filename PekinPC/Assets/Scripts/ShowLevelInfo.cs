@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class ShowLevelInfo : MonoBehaviour
 {
     [SerializeField] private Button levelButton;
-    [SerializeField] private TextMeshProUGUI levelInfo;
-
-    private Color32 defaultColor = new Color32(255, 255, 255, 255); 
-    private Color32 highlightColor = new Color32(255, 102, 0, 255); 
+    [SerializeField] private GameObject levelInfo;
+    [SerializeField] private Sprite highlightImage;
+    [SerializeField] private Sprite defaultImage;
 
     private void OnEnable()
     {
         if (levelButton != null)
-            levelButton.image.color = highlightColor;
+            levelButton.image.sprite = highlightImage;
         if (levelInfo != null)
-            levelInfo.gameObject.SetActive(true);
+            levelInfo.SetActive(true);
     }
     private void OnDisable()
     {
         if (levelButton != null)
-            levelButton.image.color = defaultColor;
+            levelButton.image.sprite = defaultImage;
         if (levelInfo != null)
-            levelInfo.gameObject.SetActive(false);
+            levelInfo.SetActive(false);
     }
 }
