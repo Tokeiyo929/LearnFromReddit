@@ -125,9 +125,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3999477561071834751, guid: d33c1de98d390c148b6cb9f80f9b520f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176140664242885028, guid: d33c1de98d390c148b6cb9f80f9b520f, type: 3}
+      propertyPath: m_text
+      value: "\u672A\u77E5"
+      objectReference: {fileID: 0}
     - target: {fileID: 8116156153776298106, guid: d33c1de98d390c148b6cb9f80f9b520f, type: 3}
       propertyPath: m_Name
       value: IntroduceUI3D
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116156153776298106, guid: d33c1de98d390c148b6cb9f80f9b520f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121636647160938743, guid: d33c1de98d390c148b6cb9f80f9b520f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4776268124702103230, guid: d33c1de98d390c148b6cb9f80f9b520f, type: 3}
