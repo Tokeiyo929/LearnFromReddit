@@ -16,6 +16,7 @@ public class RayResponse : MonoBehaviour
 
     public Transform carryParent;
     private GameObject lastOutlineObject;
+    public GameObject player;
 
     private void OnEnable()
     {
@@ -47,6 +48,7 @@ public class RayResponse : MonoBehaviour
         PickObject(_hitInfo);
         //UpdateCursorPosition(_hitInfo);
         OpenDoor(_hitInfo);
+        OpenUI(_hitInfo);
     }
     void HandleNoObjectHit()
     {
@@ -54,7 +56,7 @@ public class RayResponse : MonoBehaviour
         HideOutline();
     }
 
-    #region CanvasÏà¹Ø
+    #region Canvasï¿½ï¿½ï¿½
     //void ShowCanvas(GameObject _obj)
     //{
     //    if(currentShownObj != null && currentShownObj != _obj)
@@ -85,7 +87,7 @@ public class RayResponse : MonoBehaviour
     //}
     #endregion
 
-    #region CursorÏà¹Ø
+    #region Cursorï¿½ï¿½ï¿½
     //void UpdateCursorPosition(RaycastHit _hitInfo)
     //{
     //    if(currentCursor != null)
@@ -111,7 +113,7 @@ public class RayResponse : MonoBehaviour
     //}
     #endregion
 
-    #region OutlineÏà¹Ø
+    #region Outlineï¿½ï¿½ï¿½
     void ShowOutline(GameObject _obj)
     {
         SetOutline(_obj, true);
@@ -133,7 +135,7 @@ public class RayResponse : MonoBehaviour
     }
     #endregion
 
-    #region PickÎïÌåÏà¹Ø
+    #region Pickï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     void PickObject(RaycastHit _hitInfo)
     {
         if (_hitInfo.collider.gameObject.layer != 9)
@@ -153,6 +155,7 @@ public class RayResponse : MonoBehaviour
     }
     #endregion
 
+    #region ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     void OpenDoor(RaycastHit _hitInfo)
     {
         if (_hitInfo.collider.gameObject.layer != 10)
@@ -187,4 +190,52 @@ public class RayResponse : MonoBehaviour
         _objTrans.rotation = endRot;
         
     }
+    #endregion
+
+    void OpenUI(RaycastHit _hitInfo)
+    {
+        if (_hitInfo.collider.gameObject.layer != 11)
+            return;
+        if (Input.GetMouseButtonDown(0))
+        {
+            player.GetComponent<DetectCollider>().enabled = false;
+            StartCoroutine(MoveCamera(_hitInfo.collider.gameObject.transform.Find("Camera").position, _hitInfo.collider.gameObject.transform.Find("Camera").rotation));
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            StartCoroutine(MoveCameraLocal(new Vector3(0, 0.4f, 0)));
+        }
+    }
+    IEnumerator MoveCamera(Vector3 _afterPos, Quaternion _afterRot)
+    {
+        float _duration = 0.3f;
+        float passTime = 0;
+        while(passTime < _duration)
+        {
+            player.transform.Find("Camera").position = Vector3.Slerp(player.transform.Find("Camera").position, _afterPos, passTime / _duration);
+            player.transform.Find("Camera").rotation = Quaternion.Slerp(player.transform.Find("Camera").rotation, _afterRot, passTime / _duration);
+            passTime += Time.deltaTime;
+            yield return null;
+        }
+
+        player.transform.Find("Camera").position = _afterPos;
+        player.transform.Find("Camera").rotation = _afterRot;
+        
+    }
+    IEnumerator MoveCameraLocal(Vector3 _afterPos)
+    {
+        player.GetComponent<DetectCollider>().enabled = true;
+        float _duration = 0.3f;
+        float passTime = 0;
+        while(passTime < _duration)
+        {
+            player.transform.Find("Camera").localPosition = Vector3.Slerp(player.transform.Find("Camera").localPosition, _afterPos, passTime / _duration);
+            passTime += Time.deltaTime;
+            yield return null;
+        }
+        player.transform.Find("Camera").localPosition = _afterPos;
+        
+        
+    }
+    
 }
