@@ -14,6 +14,7 @@ public class RayResponse : MonoBehaviour
     //private GameObject currentCursor = null;
     //private GameObject currentShownObj = null;
 
+
     public Transform carryParent;
     private GameObject lastOutlineObject;
     public GameObject player;
@@ -56,7 +57,7 @@ public class RayResponse : MonoBehaviour
         HideOutline();
     }
 
-    #region Canvas���
+    #region 「功能暂存」Canvas打开
     //void ShowCanvas(GameObject _obj)
     //{
     //    if(currentShownObj != null && currentShownObj != _obj)
@@ -87,7 +88,7 @@ public class RayResponse : MonoBehaviour
     //}
     #endregion
 
-    #region Cursor���
+    #region 「功能暂存」Cursor物体表面
     //void UpdateCursorPosition(RaycastHit _hitInfo)
     //{
     //    if(currentCursor != null)
@@ -113,7 +114,7 @@ public class RayResponse : MonoBehaviour
     //}
     #endregion
 
-    #region Outline���
+    #region Outline物体
     void ShowOutline(GameObject _obj)
     {
         SetOutline(_obj, true);
@@ -135,27 +136,30 @@ public class RayResponse : MonoBehaviour
     }
     #endregion
 
-    #region Pick�������
+    #region Pick物体
+    private GameObject carriedObject;
     void PickObject(RaycastHit _hitInfo)
     {
         if (_hitInfo.collider.gameObject.layer != 9)
             return;
-        GameObject _obj = _hitInfo.collider.gameObject;
-        if (Input.GetMouseButtonDown(0))
+        
+        if (carriedObject == null && Input.GetMouseButtonDown(0))
         {
-            _obj.transform.parent = carryParent;
-            _obj.transform.localPosition = Vector3.zero;
-            _obj.transform.localEulerAngles = Vector3.zero;
+            carriedObject = _hitInfo.collider.gameObject;
+            carriedObject.transform.SetParent(carryParent);
+            carriedObject.transform.localPosition = Vector3.zero;
+            carriedObject.transform.localRotation = Quaternion.identity;
         }
-        if (Input.GetMouseButtonUp(0))
+        if (carriedObject != null && Input.GetMouseButtonUp(0))
         {
-            _obj.transform.parent = null;
-            _obj.transform.localEulerAngles = new Vector3(0, _obj.transform.localEulerAngles.y, 0);
+            carriedObject.transform.SetParent(null);
+            carriedObject.transform.eulerAngles = new Vector3(0, carriedObject.transform.eulerAngles.y, 0);
+            carriedObject = null;
         }
     }
     #endregion
 
-    #region �������
+    #region 开门
     void OpenDoor(RaycastHit _hitInfo)
     {
         if (_hitInfo.collider.gameObject.layer != 10)
@@ -192,18 +196,26 @@ public class RayResponse : MonoBehaviour
     }
     #endregion
 
+    #region 查看操作面板UI
+    private Vector3 formerPos;
+    private Quaternion formerRot;
+    private Transform cameraTransform;
     void OpenUI(RaycastHit _hitInfo)
     {
+        cameraTransform = player.transform.Find("Camera");
         if (_hitInfo.collider.gameObject.layer != 11)
             return;
         if (Input.GetMouseButtonDown(0))
         {
             player.GetComponent<DetectCollider>().enabled = false;
+            formerPos = cameraTransform.position;
+            formerRot = cameraTransform.rotation;
             StartCoroutine(MoveCamera(_hitInfo.collider.gameObject.transform.Find("Camera").position, _hitInfo.collider.gameObject.transform.Find("Camera").rotation));
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            StartCoroutine(MoveCameraLocal(new Vector3(0, 0.4f, 0)));
+            player.GetComponent<DetectCollider>().enabled = true;
+            StartCoroutine(MoveCamera(formerPos, formerRot));
         }
     }
     IEnumerator MoveCamera(Vector3 _afterPos, Quaternion _afterRot)
@@ -212,30 +224,16 @@ public class RayResponse : MonoBehaviour
         float passTime = 0;
         while(passTime < _duration)
         {
-            player.transform.Find("Camera").position = Vector3.Slerp(player.transform.Find("Camera").position, _afterPos, passTime / _duration);
-            player.transform.Find("Camera").rotation = Quaternion.Slerp(player.transform.Find("Camera").rotation, _afterRot, passTime / _duration);
+            cameraTransform.position = Vector3.Slerp(cameraTransform.position, _afterPos, passTime / _duration);
+            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, _afterRot, passTime / _duration);
             passTime += Time.deltaTime;
             yield return null;
         }
 
-        player.transform.Find("Camera").position = _afterPos;
-        player.transform.Find("Camera").rotation = _afterRot;
+        cameraTransform.position = _afterPos;
+        cameraTransform.rotation = _afterRot;
         
     }
-    IEnumerator MoveCameraLocal(Vector3 _afterPos)
-    {
-        player.GetComponent<DetectCollider>().enabled = true;
-        float _duration = 0.3f;
-        float passTime = 0;
-        while(passTime < _duration)
-        {
-            player.transform.Find("Camera").localPosition = Vector3.Slerp(player.transform.Find("Camera").localPosition, _afterPos, passTime / _duration);
-            passTime += Time.deltaTime;
-            yield return null;
-        }
-        player.transform.Find("Camera").localPosition = _afterPos;
-        
-        
-    }
-    
+    #endregion
+
 }
