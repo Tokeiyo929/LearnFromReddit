@@ -28,7 +28,6 @@ public class Paginator : MonoBehaviour
 
 
     [Header("UI 元素引用")]
-    public Transform contentArea; // 存放当前页内容的容器
     public Image contentImage;   // 图片
     public TMP_Text contentName; // 名字文本
     public TMP_Text contentDesc; // 介绍文本

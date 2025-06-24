@@ -6,7 +6,9 @@ public class ShowHideMap : MonoBehaviour
 {
     [SerializeField] Camera MapCamera;
     [SerializeField] Camera PlayerCamera;
+    [SerializeField] Camera MiniMapCamera;
     [SerializeField] GameObject LeftButton;
+    [SerializeField] GameObject MiniMap;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +25,16 @@ public class ShowHideMap : MonoBehaviour
         if (MapCamera.gameObject.activeSelf)
         {
             PlayerCamera.gameObject.SetActive(false);
+            MiniMapCamera.gameObject.SetActive(false);
+            MiniMap.SetActive(false);
             LeftButton.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
         }
         else
         {
             PlayerCamera.gameObject.SetActive(true);
+            MiniMapCamera.gameObject.SetActive(true);
+            MiniMap.SetActive(true);
             LeftButton.gameObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
         }

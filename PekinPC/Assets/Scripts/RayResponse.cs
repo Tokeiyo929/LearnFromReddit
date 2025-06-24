@@ -210,7 +210,7 @@ public class RayResponse : MonoBehaviour
             player.GetComponent<DetectCollider>().enabled = false;
             formerPos = cameraTransform.position;
             formerRot = cameraTransform.rotation;
-            StartCoroutine(MoveCamera(_hitInfo.collider.gameObject.transform.Find("Camera").position, _hitInfo.collider.gameObject.transform.Find("Camera").rotation));
+            StartCoroutine(MoveCamera(_hitInfo.collider.gameObject.transform.Find("MovePos").position, _hitInfo.collider.gameObject.transform.Find("MovePos").rotation));
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
