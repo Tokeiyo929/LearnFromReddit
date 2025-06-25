@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.slimenull.unity-minimaps": {
-      "version": "https://github.com/SlimeNull/UnityMinimaps.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "b0ea4343c231dd423a14b25f52a817658b367ea0"
-    },
     "com.unity.collab-proxy": {
       "version": "2.8.2",
       "depth": 0,
@@ -72,6 +65,15 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.postprocessing": {
+      "version": "3.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.settings-manager": {
