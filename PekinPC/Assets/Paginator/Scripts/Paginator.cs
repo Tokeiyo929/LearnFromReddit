@@ -188,7 +188,10 @@ public class Paginator : MonoBehaviour
             }
         }
     }
-
+    private void OnEnable()
+    {
+        UpdatePageContent(currentPage);
+    }
     private void UpdatePageContent(int pageIndex)
     {
         // 确保索引有效
