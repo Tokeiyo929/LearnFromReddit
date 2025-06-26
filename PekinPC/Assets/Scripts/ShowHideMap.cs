@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShowHideMap : MonoBehaviour
 {
-    [SerializeField] Camera MapCamera;
+    [SerializeField] GameObject Map3D;
     [SerializeField] Camera PlayerCamera;
     [SerializeField] Camera MiniMapCamera;
     [SerializeField] GameObject LeftButton;
@@ -20,9 +20,9 @@ public class ShowHideMap : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            MapCamera.gameObject.SetActive(!MapCamera.gameObject.activeSelf);
+            Map3D.gameObject.SetActive(!Map3D.gameObject.activeSelf);
         }
-        if (MapCamera.gameObject.activeSelf)
+        if (Map3D.gameObject.activeSelf)
         {
             PlayerCamera.gameObject.SetActive(false);
             MiniMapCamera.gameObject.SetActive(false);

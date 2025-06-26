@@ -31,7 +31,7 @@ public class SphereCameraController : MonoBehaviour
     {
         float scaleValue = Input.GetAxis("Mouse ScrollWheel");
         distance = Mathf.Clamp(distance - scaleValue * zoomSpeed, minDistance, maxDistance);
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButton(1))
         {
             Vector3 delta = Input.mousePosition - lastMousePosition;
             currentX += delta.x * rotateSpeed * 0.02f;
