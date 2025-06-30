@@ -6,8 +6,7 @@ public class ShowHideMap : MonoBehaviour
 {
     [SerializeField] GameObject Map3D;
     [SerializeField] Camera PlayerCamera;
-    [SerializeField] Camera MiniMapCamera;
-    [SerializeField] GameObject LeftButton;
+    [SerializeField] GameObject LeftBar;
     [SerializeField] GameObject MiniMap;
     // Start is called before the first frame update
     void Start()
@@ -20,23 +19,29 @@ public class ShowHideMap : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            Map3D.gameObject.SetActive(!Map3D.gameObject.activeSelf);
+            Map3D.SetActive(!Map3D.activeSelf);
+            UpdateGameState(Map3D.activeSelf);
         }
-        if (Map3D.gameObject.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape) && Map3D.activeSelf)
         {
-            PlayerCamera.gameObject.SetActive(false);
-            MiniMapCamera.gameObject.SetActive(false);
-            MiniMap.SetActive(false);
-            LeftButton.gameObject.SetActive(true);
+            Map3D.SetActive(false);
+            UpdateGameState(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
             Cursor.lockState = CursorLockMode.Confined;
         }
-        else
+        if (Input.GetKeyUp(KeyCode.LeftAlt) && !Map3D.activeSelf)
         {
-            PlayerCamera.gameObject.SetActive(true);
-            MiniMapCamera.gameObject.SetActive(true);
-            MiniMap.SetActive(true);
-            LeftButton.gameObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+    public void UpdateGameState(bool mapActive)
+    {
+        PlayerCamera.gameObject.SetActive(!mapActive);
+        MiniMap.SetActive(!mapActive);
+        LeftBar.SetActive(mapActive);
+        Cursor.lockState = mapActive ? CursorLockMode.Confined : Cursor.lockState = CursorLockMode.Locked;
     }
 }
